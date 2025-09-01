@@ -42,10 +42,9 @@ const Navbar = ({ children }) => {
 
     ];
 
-
-
     return (
         <div className='flex justify-center items-center  '>
+
             <div className=' my-[50px] mx-auto '>
                 <div className='w-[375px] h-[665px] border-6 shadow-2xl   border-black rounded-3xl   relative bg-[#F4F8FB] flex flex-col justify-center items-center'>
 

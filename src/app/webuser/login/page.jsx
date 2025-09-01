@@ -34,9 +34,11 @@ export default function LoginForm() {
       </div>
 
       {/* Login Button */}
-      <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 rounded mb-4 cursor-pointer">
-        Login
-      </button>
+      <Link href={"/webuser/dashboard"}>
+        <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 rounded mb-4 cursor-pointer">
+          Login
+        </button>
+      </Link>
 
       {/* Register Link */}
       <p className="text-center text-sm">
