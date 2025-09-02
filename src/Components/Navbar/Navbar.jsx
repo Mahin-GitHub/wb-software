@@ -44,14 +44,14 @@ const Navbar = ({ children }) => {
 
     return (
 
-        <div className="flex justify-center items-center  sm:my-[50px] bg-white">
+        <div className="flex justify-center items-center bg-white sm:my-[50px]">
             {/* Phone Mockup */}
-            <div className="relative w-full h-screen  sm:max-w-[375px] sm:h-[665px] sm:border-6 sm:shadow-2xl sm:border-black sm:rounded-2xl bg-gray-100 flex flex-col   overflow-hidden">
+            <div className="relative w-full h-screen sm:max-w-[375px] sm:h-[665px] sm:border-6 sm:shadow-2xl sm:border-black sm:rounded-2xl bg-gray-100 flex flex-col">
 
                 {/* Scrollable Screen */}
-                <div className="flex-1 overflow-y-auto no-scrollbar px-4 pt-6 pb-20">
+                <div className="flex-1 overflow-y-auto no-scrollbar px-4 pt-6 pb-6">
                     {/* Top Logo */}
-                    <div className="  w-full flex justify-center  mb-4">
+                    <div className="w-full flex justify-center mb-4">
                         <div className="w-[220px]">
                             <Image
                                 className="w-full h-auto"
@@ -64,21 +64,20 @@ const Navbar = ({ children }) => {
                     </div>
 
                     {/* Content */}
-                    <div className="flex  justify-center items-center ">
+                    <div className="flex justify-center items-center h-full">
                         {children}
                     </div>
                 </div>
 
-                {/* Bottom Menu (sticky at bottom) */}
-                <div className="fixed sm:sticky bottom-0 w-full">
-                    <div className="bg-white py-2 sm:rounded-b-2xl flex justify-between items-center px-4">
-                        {menuItems.map((item, index) => (
-                            <BottomMenu key={index} item={item} />
-                        ))}
-                    </div>
+                {/*Bottom Menu*/}
+                <div className="bg-white py-2 sm:rounded-b-2xl flex justify-between items-center px-4">
+                    {menuItems.map((item, index) => (
+                        <BottomMenu key={index} item={item} />
+                    ))}
                 </div>
             </div>
         </div>
+
 
 
     )
