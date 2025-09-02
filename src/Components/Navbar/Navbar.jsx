@@ -46,7 +46,7 @@ const Navbar = ({ children }) => {
 
 
 
-    <div className="flex justify-center items-center h-screen sm:h-full overflow-hidden  sm:my-[50px]">
+    <div className="flex justify-center items-center min-h-screen sm:h-full overflow-hidden overflow-y-hidden  sm:my-[50px]">
       {/* Phone Mockup */}
       <div className="relative w-full h-full sm:max-w-[375px] sm:h-[665px] sm:border-[6px] sm:shadow-2xl sm:border-black sm:rounded-2xl bg-gray-100 flex flex-col">
 
