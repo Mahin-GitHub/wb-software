@@ -15,15 +15,15 @@ export default function LoginForm() {
 
       {/* Mobile Input */}
 
-      <InputField icon={<FaPhoneAlt className="text-gray-500 mr-2" />} type={"text"} placeholder={"Mobile"} />
+      <InputField icon={<FaPhoneAlt className="text-[#666666] " />} type={"text"} placeholder={"Mobile"} />
 
       {/* Password Input */}
 
-      <InputField icon={<FaLock className="text-gray-500 mr-2" />} type={"password"} placeholder={"Password"} />
+      <InputField icon={<FaLock className="text-[#666666]" />} type={"password"} placeholder={"Password"} />
 
 
       {/* Remember me + Forgot */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between my-4">
         <label className="flex items-center gap-2 text-sm">
           <input type="checkbox" className="accent-blue-500 w-5 h-5" />
           Remember me
