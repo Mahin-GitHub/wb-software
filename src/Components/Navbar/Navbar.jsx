@@ -46,14 +46,12 @@ const Navbar = ({ children }) => {
 
 
 
-    <div className="flex justify-center items-center  h-full overflow-hidden sm:my-[50px]">
+    <div className="flex justify-center items-center h-screen sm:h-full overflow-hidden bg-white sm:my-[50px]">
       {/* Phone Mockup */}
-      <div className="relative w-full h-full sm:max-w-[375px] sm:h-[665px] 
-                  sm:border-[6px] sm:shadow-2xl  sm:border-black sm:rounded-2xl 
-                  bg-gray-100 flex flex-col">
+      <div className="relative w-full h-full sm:max-w-[375px] sm:h-[665px] sm:border-[6px] sm:shadow-2xl sm:border-black sm:rounded-2xl bg-gray-100 flex flex-col">
 
         {/* Top Logo */}
-        <div className="w-full flex justify-center pt-6 pb-4 px-4">
+        <div className="w-full flex justify-center pt-6 pb-4 px-4 flex-shrink-0">
           <div className="w-[220px]">
             <Image
               className="w-full h-auto"
@@ -66,20 +64,22 @@ const Navbar = ({ children }) => {
         </div>
 
         {/* Scrollable Children */}
-        <div className="flex-1 min-h-0 overflow-y-auto no-scrollbar px-4">
-          <div className="flex justify-center items-center min-h-full">
+        <div className="flex-1 overflow-y-auto px-4 pt-2 pb-[80px] no-scrollbar">
+          <div className="flex justify-center items-center">
             {children}
           </div>
         </div>
 
         {/* Bottom Menu */}
-        <div className=" w-full fixed sm:sticky bottom-0 bg-white py-2 sm:rounded-b-2xl flex justify-between items-center px-4">
+        <div className="absolute bottom-0 left-0 w-full bg-white py-2 px-4 flex justify-between items-center sm:rounded-b-2xl safe-area-bottom">
           {menuItems.map((item, index) => (
             <BottomMenu key={index} item={item} />
           ))}
         </div>
       </div>
     </div>
+
+
 
   )
 }
