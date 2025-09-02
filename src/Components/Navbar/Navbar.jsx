@@ -46,7 +46,7 @@ const Navbar = ({ children }) => {
 
         <div className="flex justify-center items-center sm:min-h-screen  sm:my-[50px] bg-white">
             {/* Phone Mockup */}
-            <div className="relative w-full  sm:max-w-[375px] sm:h-[665px] sm:border-6 sm:shadow-2xl sm:border-black sm:rounded-2xl bg-gray-100 flex flex-col  overflow-hidden">
+            <div className="relative w-full  sm:max-w-[375px] sm:h-[665px] sm:border-6 sm:shadow-2xl sm:border-black sm:rounded-2xl bg-gray-200 flex flex-col  overflow-hidden">
 
                 {/* Scrollable Screen */}
                 <div className="flex-1 overflow-y-auto no-scrollbar px-4 pt-6 pb-20">
