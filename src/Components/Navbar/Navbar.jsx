@@ -46,10 +46,10 @@ const Navbar = ({ children }) => {
 
 
 
-    <div className="flex justify-center items-center bg-white h-screen overflow-hidden sm:my-[50px]">
+    <div className="flex justify-center items-center  h-full overflow-hidden sm:my-[50px]">
       {/* Phone Mockup */}
       <div className="relative w-full h-full sm:max-w-[375px] sm:h-[665px] 
-                  sm:border-[6px] sm:shadow-2xl sm:border-black sm:rounded-2xl 
+                  sm:border-[6px] sm:shadow-2xl  sm:border-black sm:rounded-2xl 
                   bg-gray-100 flex flex-col">
 
         {/* Top Logo */}
@@ -73,7 +73,7 @@ const Navbar = ({ children }) => {
         </div>
 
         {/* Bottom Menu */}
-        <div className="bg-white py-2 sm:rounded-b-2xl flex justify-between items-center px-4">
+        <div className=" w-full fixed sm:sticky bottom-0 bg-white py-2 sm:rounded-b-2xl flex justify-between items-center px-4">
           {menuItems.map((item, index) => (
             <BottomMenu key={index} item={item} />
           ))}
