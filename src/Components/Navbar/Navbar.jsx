@@ -43,38 +43,44 @@ const Navbar = ({ children }) => {
     ];
 
     return (
-        <div className='flex justify-center items-center  '>
 
-            <div className=' my-[50px] mx-auto '>
-                <div className='w-[375px] h-[665px] border-6 shadow-2xl   border-black rounded-3xl   relative bg-[#F4F8FB] flex flex-col justify-center items-center'>
+        <div className="flex justify-center items-center sm:min-h-screen  sm:my-[50px] bg-gray-100">
+            {/* Phone Mockup */}
+            <div className="relative w-full  sm:max-w-[375px] sm:h-[665px] sm:border-6 sm:shadow-2xl sm:border-black sm:rounded-2xl bg-[#F4F8FB] flex flex-col overflow-hidden">
 
-                    <div className="absolute top-2">
-                        {/* Top Logo  */}
-                        <div className='w-[220px] h-auto'>
-
-                            <Image className='w-full h-full' src={"/assets/logo.png"} width={1000} height={1000} alt='logo' />
+                {/* Scrollable Screen */}
+                <div className="flex-1 overflow-y-auto px-4 pt-6 pb-20">
+                    {/* Top Logo */}
+                    <div className="  w-full flex justify-center  mb-6">
+                        <div className="w-[220px]">
+                            <Image
+                                className="w-full h-auto"
+                                src="/assets/logo.png"
+                                width={1000}
+                                height={1000}
+                                alt="logo"
+                            />
                         </div>
-
-
                     </div>
-                    <div>
 
+                    {/* Content */}
+                    <div className="flex flex-col justify-center items-center space-y-6">
                         {children}
                     </div>
+                </div>
 
-
-                    {/* Bottom Menu */}
-                    <div className='absolute bottom-0 left-0 w-full'>
-                        <div className='bg-white w-full py-1 rounded-b-3xl flex justify-between items-center px-4'>
-                            {menuItems.map((item, index) => (
-                                <BottomMenu key={index} item={item} />
-                            ))}
-                        </div>
+                {/* Bottom Menu (sticky at bottom) */}
+                <div className="fixed sm:sticky bottom-0 w-full">
+                    <div className="bg-white py-2 sm:rounded-b-2xl flex justify-between items-center px-4">
+                        {menuItems.map((item, index) => (
+                            <BottomMenu key={index} item={item} />
+                        ))}
                     </div>
-
                 </div>
             </div>
-        </div >
+        </div>
+
+
     )
 }
 
