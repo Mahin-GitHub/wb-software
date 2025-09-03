@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased container flex justify-center mx-auto bg-gray-100 `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full flex justify-center items-center mx-auto bg-gray-100 `}
       >
         <div className="relative sm:max-w-[350px] sm:h-[667px] w-full h-full sm:border-6 sm:border-gray-950  sm:rounded-2xl sm:shadow-2xl flex flex-col overflow-hidden my-[50px]">
           <div className="fixed sm:absolute top-0 bg-gray-100  w-full p-2">
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             <TopNavBar />
           </div>
 
-          <div className="flex-1 overflow-y-auto no-scrollbar mt-4 mb-8 sm:mt-12  px-2 w-full h-full  ">
+          <div className="flex-1 overflow-y-auto no-scrollbar my-8  px-2 w-full h-full  ">
 
             {children}
           </div>
