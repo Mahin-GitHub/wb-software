@@ -12,7 +12,7 @@ const BottomNavItem = ({ item }) => {
 
   return (
     <div>
-      <div className='px-1 py-2 '>
+      <div className='p-2 '>
         <Link className={`font-bold flex flex-col justify-center items-center ${isActive ? 'text-orange-500' : 'text-gray-700'
           }`} href={path_url}>
           <div className='text-xl '>{icon}</div>

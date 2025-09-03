@@ -5,7 +5,7 @@ const TopNavBar = () => {
     return (
         <div>
             {/* Top Logo */}
-            <div className='w-full px-1 py-2 flex justify-center '>
+            <div className='w-full p-2 flex justify-center '>
                 <div className="w-[220px]">
                     <Image
                         className="w-full h-auto"

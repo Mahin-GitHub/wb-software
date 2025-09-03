@@ -34,7 +34,7 @@ export default function LoginForm() {
       </div>
 
       {/* Login Button */}
-      <Link href={"/webuser/dashboard"}>
+      <Link href={"/user/dashboard"}>
         <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 rounded mb-4 cursor-pointer">
           Login
         </button>
@@ -43,7 +43,7 @@ export default function LoginForm() {
       {/* Register Link */}
       <p className="text-center text-sm">
         Don&apos;t have an account?
-        <Link href={"/webuser/register"} className="text-orange-500 font-medium hover:underline ml-2">
+        <Link href={"/register"} className="text-orange-500 font-medium hover:underline ml-2">
           Register
         </Link>
       </p>

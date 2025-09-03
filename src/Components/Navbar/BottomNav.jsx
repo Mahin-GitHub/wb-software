@@ -11,27 +11,27 @@ const BottomNav = () => {
         {
             icon: <MdHome />,
             text: "Home",
-            path_url: "/webuser/home"
+            path_url: "/home"
         },
         {
             icon: <CgLogIn />,
             text: "Login",
-            path_url: "/webuser/login"
+            path_url: "/login"
         },
         {
             icon: <MdPersonAddAlt1 />,
             text: "Register",
-            path_url: "/webuser/register"
+            path_url: "/register"
         },
         {
             icon: <FaBook />,
             text: "Blog",
-            path_url: "/webuser/blog"
+            path_url: "/blog"
         },
         {
             icon: <BsTelephoneFill />,
             text: "Contact",
-            path_url: "/webuser/contact"
+            path_url: "/contact"
         },
 
     ];

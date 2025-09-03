@@ -1,8 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 
-import TopNavBar from "@/Components/Navbar/TopNavBar";
-import BottomNav from "@/Components/Navbar/BottomNav";
+import DashboardBottomNavbar from "@/Components/Navbar/DashboardBottomNavbar";
+import DashboardTopNavbar from "@/Components/Navbar/DashboardTopNavbar";
+
+
 
 
 const geistSans = Geist({
@@ -26,18 +28,18 @@ export default function RootLayout({ children }) {
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased w-full flex justify-center items-center mx-auto bg-gray-100 `}
             >
-                <div className="relative sm:max-w-[350px] sm:h-[667px] w-full h-full sm:border-6 sm:border-gray-950  sm:rounded-2xl sm:shadow-2xl flex flex-col overflow-hidden my-[50px]">
-                    <div className="fixed sm:absolute top-0 bg-gray-100  w-full p-2">
+                <div className="relative sm:max-w-[375px] sm:h-[667px] w-full h-full sm:border-6 sm:border-gray-950  sm:rounded-2xl sm:shadow-2xl flex flex-col overflow-hidden my-[50px]">
+                    <div className="fixed sm:absolute top-0 bg-gray-100  w-full ">
 
-                        <TopNavBar />
+                        <DashboardTopNavbar />
                     </div>
 
                     <div className="flex-1 overflow-y-auto no-scrollbar my-8  px-2 w-full h-full  ">
 
                         {children}
                     </div>
-                    <div className="fixed sm:absolute bottom-0 bg-white w-full p-2">
-                        <BottomNav />
+                    <div className="fixed sm:absolute bottom-0 bg-white w-full ">
+                        <DashboardBottomNavbar />
 
                     </div>
                 </div>
