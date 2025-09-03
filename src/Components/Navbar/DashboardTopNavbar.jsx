@@ -9,7 +9,7 @@ import { IoIosMailOpen } from "react-icons/io";
 const DashboardTopNavbar = () => {
     return (
         <div>
-            <div className='w-full  p-2 flex justify-between items-center  bg-orange-400'>
+            <div className='w-full  px-2 py-4  flex justify-between items-center  bg-orange-400'>
                 <div>
                     <Link href={"/user/dashboard"}>
                         <MdHome className='w-6 h-6 text-white font-bold' />
