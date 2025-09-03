@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
 
-const BottomMenu = ({ item }) => {
+const BottomNavItem = ({ item }) => {
   const { icon, text, path_url } = item;
 
 
@@ -23,4 +23,4 @@ const BottomMenu = ({ item }) => {
   )
 }
 
-export default BottomMenu
+export default BottomNavItem

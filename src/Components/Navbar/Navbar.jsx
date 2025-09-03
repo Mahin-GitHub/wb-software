@@ -6,41 +6,41 @@ import { CgLogIn } from "react-icons/cg";
 import { MdPersonAddAlt1 } from "react-icons/md";
 import { FaBook } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/bs";
-import BottomMenu from './BottomMenu';
+import BottomMenu from './BottomNavItem';
 
 
 
 
 const Navbar = ({ children }) => {
 
-  const menuItems = [
-    {
-      icon: <MdHome />,
-      text: "Home",
-      path_url: "/webuser/home"
-    },
-    {
-      icon: <CgLogIn />,
-      text: "Login",
-      path_url: "/webuser/login"
-    },
-    {
-      icon: <MdPersonAddAlt1 />,
-      text: "Register",
-      path_url: "/webuser/register"
-    },
-    {
-      icon: <FaBook />,
-      text: "Blog",
-      path_url: "/webuser/blog"
-    },
-    {
-      icon: <BsTelephoneFill />,
-      text: "Contact",
-      path_url: "/webuser/contact"
-    },
+  // const menuItems = [
+  //   {
+  //     icon: <MdHome />,
+  //     text: "Home",
+  //     path_url: "/webuser/home"
+  //   },
+  //   {
+  //     icon: <CgLogIn />,
+  //     text: "Login",
+  //     path_url: "/webuser/login"
+  //   },
+  //   {
+  //     icon: <MdPersonAddAlt1 />,
+  //     text: "Register",
+  //     path_url: "/webuser/register"
+  //   },
+  //   {
+  //     icon: <FaBook />,
+  //     text: "Blog",
+  //     path_url: "/webuser/blog"
+  //   },
+  //   {
+  //     icon: <BsTelephoneFill />,
+  //     text: "Contact",
+  //     path_url: "/webuser/contact"
+  //   },
 
-  ];
+  // ];
 
   return (
 
@@ -50,7 +50,7 @@ const Navbar = ({ children }) => {
       {/* Phone Mockup */}
       <div className="relative w-full h-full sm:max-w-[375px] sm:h-[665px] sm:border-[6px] sm:shadow-2xl sm:border-black sm:rounded-2xl bg-gray-100 flex flex-col">
 
-        {/* Top Logo */}
+        {/* Top Logo
         <div className="w-full flex justify-center pt-6 pb-4 px-4 flex-shrink-0">
           <div className="w-[220px]">
             <Image
@@ -61,7 +61,7 @@ const Navbar = ({ children }) => {
               alt="logo"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Scrollable Children */}
         <div className="flex-1 overflow-y-auto px-4 pt-2 pb-[80px] no-scrollbar">
@@ -71,11 +71,11 @@ const Navbar = ({ children }) => {
         </div>
 
         {/* Bottom Menu */}
-        <div className="absolute bottom-0 left-0 w-full bg-white py-2 px-4 flex justify-between items-center sm:rounded-b-2xl safe-area-bottom">
+        {/* <div className="absolute bottom-0 left-0 w-full bg-white py-2 px-4 flex justify-between items-center sm:rounded-b-2xl safe-area-bottom">
           {menuItems.map((item, index) => (
             <BottomMenu key={index} item={item} />
-          ))}
-        </div>
+          ))} */}
+        {/* </div> */}
       </div>
     </div>
 
