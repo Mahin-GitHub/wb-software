@@ -9,47 +9,46 @@ const Dashboard = () => {
     return (
 
         <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:mt-8  bg-white'>
-            <div className='w-full h-auto mx-auto px-2 py-4  
-                  border border-gray-300 shadow-sm bg-white 
-                  flex justify-around items-center text-center'>
-                <div className='grid grid-cols-2  justify-center  gap-4'>
-                    <div className='p-2'>
-                        <h2 className='font-semibold text-2xl text-center mb-2'>Wallet</h2>
-                        <div className='flex justify-start items-center gap-2'>
+            <div className="w-full h-auto mx-auto px-2 py-4  
+    border border-gray-300 shadow-sm bg-white 
+    flex justify-around items-center text-center">
+
+                <div className="w-full h-auto mx-auto bg-white flex justify-around items-center text-center">
+                    {/* Wallet */}
+                    <div className="w-1/2 px-2">
+                        <h2 className="font-semibold text-2xl text-center mb-2">Wallet</h2>
+                        <div className="flex justify-start items-center gap-2">
                             <FaImages />
                             <p> Current Balance</p>
                         </div>
-                        <p className='text-center mb-2'>0TK</p>
-                        <div className='flex justify-center items-center w-full mb-2'>
+                        <p className="text-center mb-2">0TK</p>
 
-                            <button className='w-full bg-orange-400 p-2 text-white font-semibold rounded-lg'>Transaction</button>
-                        </div>
+                        <button className="w-full bg-orange-400 p-2 text-white font-semibold rounded-sm">
+                            Transaction
+                        </button>
                     </div>
-                    <div className='border-l-2'>
-                        <div className="p-2 ml-3 ">
-                            <h2 className='font-semibold text-2xl text-center mb-2'>Transfer To</h2>
-                            <div className='flex justify-center items-center w-full mb-2'>
 
-                                <button className='w-full bg-orange-400 p-2 text-white font-semibold rounded-lg'>MFS</button>
-                            </div>
+                    {/* Middle Border */}
+                    <div className="w-px bg-gray-300 h-[200px] mx-2"></div>
 
-                            <div className='flex justify-center items-center w-full mb-2 border-t-2 '>
+                    {/* Transfer To */}
+                    <div className="w-1/2 px-2">
+                        <h2 className="font-semibold text-2xl text-center mb-2">Transfer To</h2>
 
-                                <button className='w-full bg-orange-400 p-2 text-white font-semibold rounded-lg mt-1'>Account</button>
-                            </div>
-                            <div className='flex justify-center items-center w-full mb-2 border-t-2'>
+                        <button className="w-full bg-orange-400 p-2 text-white font-semibold rounded-sm mb-2">
+                            MFS
+                        </button>
 
-                                <button className='w-full bg-orange-400 p-2 text-white font-semibold rounded-lg mt-1'>Card</button>
-                            </div>
+                        <button className="w-full bg-orange-400 p-2 text-white font-semibold rounded-sm mb-2">
+                            Account
+                        </button>
 
-
-                        </div>
-
+                        <button className="w-full bg-orange-400 p-2 text-white font-semibold rounded-sm">
+                            Card
+                        </button>
                     </div>
                 </div>
-
             </div>
-
 
             <DashboardCard title={"My Accounts"}
                 icon1={<FaMobileScreen className='text-xl font-bold w-8 h-8 text-orange-400' />}
