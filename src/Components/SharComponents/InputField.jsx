@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdAdminPanelSettings } from 'react-icons/md'
+
 
 const InputField = ({ icon, type, placeholder }) => {
 
