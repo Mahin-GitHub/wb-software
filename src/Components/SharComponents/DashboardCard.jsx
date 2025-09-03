@@ -7,7 +7,7 @@ const DashboardCard = ({ title, icon1, icon2, icon3, iconName1, iconName2, iconN
         <div>
             <h2 className="font-semibold text-2xl my-2">{title}</h2>
 
-            <div className="w-full h-auto mx-auto sm:mb-12 px-2 py-4 sm:my-8 
+            <div className="w-full h-auto mx-auto  px-2 py-4
                   border border-gray-300 shadow-sm bg-white 
                   flex justify-around items-center text-center">
 

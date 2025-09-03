@@ -69,7 +69,7 @@ const Dashboard = () => {
 
             <h2 className="font-semibold text-2xl my-2">Expense</h2>
 
-            <div className="w-full h-auto mx-auto sm:mb-12 px-2 py-4 sm:my-8 
+            <div className="w-full h-auto mx-auto px-2 py-4  
                   border border-gray-300 shadow-sm bg-white 
                   flex justify-around items-center text-center">
 
@@ -110,7 +110,7 @@ const Dashboard = () => {
 
             <h2 className="font-semibold text-2xl my-2">Benificiary</h2>
 
-            <div className="w-full h-auto mx-auto sm:mb-12 px-2 py-4 sm:my-8 
+            <div className="w-full h-auto mx-auto  px-2 py-4  
                   border border-gray-300 shadow-sm bg-white 
                   flex justify-around items-center text-center">
 
@@ -136,7 +136,7 @@ const Dashboard = () => {
             {/* Calculator  */}
             <h2 className="font-semibold text-2xl my-2">Calculator</h2>
 
-            <div className="w-full h-auto mx-auto sm:mb-12 px-2 py-4 sm:my-8 
+            <div className="w-full h-auto mx-autopx-2 py-4 
                   border border-gray-300 shadow-sm bg-white 
                   flex justify-around items-center text-center">
 
@@ -178,7 +178,7 @@ const Dashboard = () => {
 
             <h2 className="font-semibold text-2xl my-2">Others</h2>
 
-            <div className="w-full h-auto mx-auto sm:mb-12 px-2 py-4 sm:my-8 
+            <div className="w-full h-auto mx-auto  px-2 py-4 
                   border border-gray-300 shadow-sm bg-white 
                   flex justify-around items-center text-center">
 
