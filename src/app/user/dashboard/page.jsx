@@ -9,7 +9,7 @@ const Dashboard = () => {
     return (
         <div>
 
-            <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 border-1 border-gray-300 shadow-sm  bg-white'>
+            <div className='w-full h-auto mx-auto px-2  py-4  border-1 border-gray-300 shadow-sm  bg-white'>
                 <div className='grid grid-cols-2  justify-center  gap-4'>
                     <div className='p-2'>
                         <h2 className='font-semibold text-2xl text-center mb-2'>Wallet</h2>
