@@ -3,7 +3,7 @@ import React from 'react'
 
 const TopNavBar = () => {
     return (
-        <div>
+        <div >
             {/* Top Logo */}
             <div className='w-full px-2 py-4 flex justify-center '>
                 <div className="w-[220px]">

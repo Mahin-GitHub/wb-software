@@ -11,7 +11,7 @@ const BottomNav = () => {
         {
             icon: <MdHome />,
             text: "Home",
-            path_url: "/home"
+            path_url: "/"
         },
         {
             icon: <CgLogIn />,

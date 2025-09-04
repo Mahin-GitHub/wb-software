@@ -1,11 +1,13 @@
+
+import Article from '@/Components/Article/Article'
 import React from 'react'
 
-const page = () => {
+const Home = () => {
   return (
-    <>
-
-    </>
+    <div className=''>
+      <Article />
+    </div>
   )
 }
 
-export default page
+export default Home

@@ -1,11 +1,12 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 body {
   scrollbar-width: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  color: black;
 
 }
 
