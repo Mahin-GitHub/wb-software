@@ -157,13 +157,16 @@ const Article = () => {
                 <SwiperSlider imgURL={imgURL} photoGallaryData={homeData?.photoGalleryNewsData} />
             </div>
 
+
+            {/* Web Story  */}
+
             <div className='w-full h-auto mx-auto  px-2     shadow-3xl bg-white'>
                 <div className="my-2 flex justify-between">
 
                     <h2 className=' font-bold'>Web Story </h2>
                     <p className="text-red-500">see all</p>
                 </div>
-                <SwiperSlider2 />
+                <SwiperSlider2 imgURL={imgURL} webStoryGallary={homeData?.webStoryNewsData} />
             </div>
             <div className='w-full h-auto mx-auto  px-2     shadow-3xl bg-white'>
                 <div className="my-2 flex justify-between">
