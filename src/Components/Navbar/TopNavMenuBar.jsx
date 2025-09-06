@@ -101,7 +101,7 @@ const TopNavMenuBar = () => {
                 <div className='flex justify-between items-center '>
                     <div className='flex justify-center items-center gap-2'>
                         <div>
-                            <IoMdMenu className='w-8 h-8 text-white' />
+                            <IoMdMenu className='w-6 h-6 text-white' />
 
                         </div>
                         <div className="flex items-center gap-2">
@@ -114,7 +114,7 @@ const TopNavMenuBar = () => {
                                 />
                             </div>
                             <div>
-                                <p className='bg-red-500 p-1 text-white'>LIVE</p>
+                                <p className='text-red-500 p-1 bg-white'>LIVE</p>
                             </div>
 
                         </div>
@@ -122,10 +122,10 @@ const TopNavMenuBar = () => {
 
                     <div className="flex items-center gap-4">
                         <div>
-                            <IoSearchOutline className='w-8 h-8 text-white' />
+                            <IoSearchOutline className='w-6 h-6 text-white' />
                         </div>
                         <div>
-                            <FaRegUser className='w-8 h-8 text-white' />
+                            <FaRegUser className='w-6 h-6 text-white' />
                         </div>
                     </div>
                 </div>
