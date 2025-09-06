@@ -50,6 +50,7 @@ const Article = () => {
 
                 </div>
 
+                {/* Under breaking news Data  */}
 
                 <div className='w-full  mx-auto sm:mb-12   p-2  shadow-3xl  text-white'>
 
@@ -65,7 +66,7 @@ const Article = () => {
 
 
 
-
+            {/* Top Story  */}
 
             <div className='my-2'>
                 <div className="mb-3 flex justify-between">
@@ -77,7 +78,7 @@ const Article = () => {
                     <figure>
                         <Image
                             className='w-full h-full'
-                            src={"/assets/newsBanner2.jpg"}
+                            src={`${imgURL}${homeData?.topStoryNewsData?.photo}`}
                             width={500}
                             height={500}
                             alt='Image'
@@ -85,16 +86,14 @@ const Article = () => {
                     </figure>
                     <div className="card-body">
 
-                        <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
+                        <p className='line-clamp-2'>{homeData?.topStoryNewsData?.title_bn}</p>
 
                     </div>
                 </div>
             </div>
-            {/* <div className='my-4 flex items-center gap-4 '>
+           
 
-                <CarouselCart2 />
-
-            </div> */}
+           
             <div className="my-4">
 
                 <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.sliderNewsData} />
