@@ -57,7 +57,7 @@ const Article = () => {
                     <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.underBrakingNewsData} />
 
 
-                   
+
                 </div>
             </div>
 
@@ -101,28 +101,34 @@ const Article = () => {
             </div>
 
 
+            {/* Latest News  */}
+
             <div className='w-full h-auto mx-auto sm:mb-12 px-2     shadow-3xl bg-white'>
                 <div className="mb-3 flex justify-between">
 
-                    <h2 className=' font-bold'>Normal News</h2>
+                    <h2 className=' font-bold'>Latest News</h2>
                     <p className="text-red-500">see all</p>
                 </div>
 
                 <div>
+
+
                     {
-                        homeData?.normalNewsData?.map((normalData, index) => {
+                        homeData?.lattestNewsData?.map((cardNews, index) => {
                             return (
                                 <div key={index}>
-                                    <NewsCard normalData={normalData} imgURL={imgURL} />
+                                    <NewsCard cardNews={cardNews} imgURL={imgURL} />
+
                                 </div>
                             )
                         })
                     }
 
-
                 </div>
 
             </div>
+
+            {/* রাষ্ট্রীয় খবর */}
 
             <div className='w-full h-auto mx-auto  px-2     shadow-3xl bg-white'>
                 <div className="my-2 flex justify-between">
@@ -130,19 +136,17 @@ const Article = () => {
                     <h2 className=' font-bold'>রাষ্ট্রীয় খবর </h2>
                     <p className="text-red-500">see all</p>
                 </div>
+                <div>
 
-                {/* <div className='my-4 flex items-center gap-4 '>
+                    <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.sliderNewsData} />
 
-                    <CarouselCart2 />
-                    <CarouselCart2 />
-                    <CarouselCart2 />
-                    <CarouselCart2 />
-                    <CarouselCart2 />
-                </div> */}
-                <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.sliderNewsData} />
+                </div>
 
 
             </div>
+
+
+            {/* Photo Galary  */}
 
             <div className='w-full h-auto mx-auto  px-2     shadow-3xl bg-white'>
                 <div className="my-2 flex justify-between">
@@ -150,7 +154,7 @@ const Article = () => {
                     <h2 className=' font-bold'>Photo Galary </h2>
                     <p className="text-red-500">see all</p>
                 </div>
-                <SwiperSlider />
+                <SwiperSlider imgURL={imgURL} photoGallaryData={homeData?.photoGalleryNewsData} />
             </div>
 
             <div className='w-full h-auto mx-auto  px-2     shadow-3xl bg-white'>
@@ -179,10 +183,10 @@ const Article = () => {
                 </div>
 
                 <div>
+                    {/* <NewsCard />
                     <NewsCard />
                     <NewsCard />
-                    <NewsCard />
-                    <NewsCard />
+                    <NewsCard /> */}
 
                 </div>
 

@@ -1,20 +1,21 @@
 import Image from 'next/image'
 import React from 'react'
 
-const NewsCard = ({ normalData,imgURL }) => {
-    // const { title_bn,photo} = normalData;
+const NewsCard = ({ cardNews, imgURL }) => {
+
+    const { title_bn, photo } = cardNews;
+
+
     return (
         <div>
             <div className='w-full flex justify-between items-center gap-4 shadow-sm mb-2 py-2'>
                 <div className='w-3/4 break-words'>
 
-                    <p className='wrap-break-word line-clamp-3'>{normalData?.title_bn}</p>
+                    <p className='wrap-break-word line-clamp-3'>{title_bn}</p>
                 </div>
-                <div className=" w-1/4">
+                <div className=" w-1/2 ">
                     <Image
-                        src={
-                            normalData?.photo?.startsWith("http") ? photo
-                                : "/assets/newsBanner2.jpg" }
+                        src={`${imgURL}${photo}`}
                         width={500}
                         height={500}
                         alt="cartImg"

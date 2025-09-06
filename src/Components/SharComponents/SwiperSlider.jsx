@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 
-const SwiperSlider = () => {
+const SwiperSlider = ({ photoGallaryData, imgURL }) => {
     return (
         <div>
             <Swiper
@@ -33,168 +33,35 @@ const SwiperSlider = () => {
                 modules={[EffectCoverflow]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <div className="card w-full shadow-sm bg-white">
-                        <figure>
-                            <Image
-                                className='w-full h-full'
-                                src={"/assets/newsBanner2.jpg"}
-                                width={500}
-                                height={500}
-                                alt='Image'
-                            />
-                        </figure>
-                        <div className="card-body">
 
-                            <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
+                <div>
+                    {
+                        photoGallaryData?.map((gallaryData, index) => {
+                            return (
+                                <SwiperSlide key={index}>
+                                    <div className="card w-full shadow-sm bg-white">
+                                        <figure>
+                                            <Image
+                                                className='w-full h-full'
+                                                src={`${imgURL}${gallaryData?.photo}`}
+                                                width={500}
+                                                height={500}
+                                                alt='Image'
+                                            />
+                                        </figure>
+                                        <div className="card-body">
 
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card w-full shadow-sm bg-white">
-                        <figure>
-                            <Image
-                                className='w-full h-full'
-                                src={"/assets/newsBanner2.jpg"}
-                                width={500}
-                                height={500}
-                                alt='Image'
-                            />
-                        </figure>
-                        <div className="card-body">
+                                            <p className='line-clamp-2'>{gallaryData?.title_bn}</p>
 
-                            <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </div>
 
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card w-full shadow-sm bg-white">
-                        <figure>
-                            <Image
-                                className='w-full h-full'
-                                src={"/assets/newsBanner2.jpg"}
-                                width={500}
-                                height={500}
-                                alt='Image'
-                            />
-                        </figure>
-                        <div className="card-body">
 
-                            <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card w-full shadow-sm bg-white">
-                        <figure>
-                            <Image
-                                className='w-full h-full'
-                                src={"/assets/newsBanner2.jpg"}
-                                width={500}
-                                height={500}
-                                alt='Image'
-                            />
-                        </figure>
-                        <div className="card-body">
-
-                            <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card w-full shadow-sm bg-white">
-                        <figure>
-                            <Image
-                                className='w-full h-full'
-                                src={"/assets/newsBanner2.jpg"}
-                                width={500}
-                                height={500}
-                                alt='Image'
-                            />
-                        </figure>
-                        <div className="card-body">
-
-                            <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card w-full shadow-sm bg-white">
-                        <figure>
-                            <Image
-                                className='w-full h-full'
-                                src={"/assets/newsBanner2.jpg"}
-                                width={500}
-                                height={500}
-                                alt='Image'
-                            />
-                        </figure>
-                        <div className="card-body">
-
-                            <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card w-full shadow-sm bg-white">
-                        <figure>
-                            <Image
-                                className='w-full h-full'
-                                src={"/assets/newsBanner2.jpg"}
-                                width={500}
-                                height={500}
-                                alt='Image'
-                            />
-                        </figure>
-                        <div className="card-body">
-
-                            <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card w-full shadow-sm bg-white">
-                        <figure>
-                            <Image
-                                className='w-full h-full'
-                                src={"/assets/newsBanner2.jpg"}
-                                width={500}
-                                height={500}
-                                alt='Image'
-                            />
-                        </figure>
-                        <div className="card-body">
-
-                            <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card w-full shadow-sm bg-white">
-                        <figure>
-                            <Image
-                                className='w-full h-full'
-                                src={"/assets/newsBanner2.jpg"}
-                                width={500}
-                                height={500}
-                                alt='Image'
-                            />
-                        </figure>
-                        <div className="card-body">
-
-                            <p className='line-clamp-2'>A card component has a figure, a body part, and inside body there are title and actions parts sdfjsdfkjsdkfjklsdjfklsdjfklsdjfklsjfklsdjkl</p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
             </Swiper>
             <style jsx global>{`
         .mySwiper .swiper-slide {
