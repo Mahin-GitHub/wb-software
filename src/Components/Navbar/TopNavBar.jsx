@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import TopNavMenuBar from './TopNavMenuBar'
 
 const TopNavBar = () => {
     return (
@@ -16,6 +17,8 @@ const TopNavBar = () => {
                     />
                 </div>
             </div>
+
+            <TopNavMenuBar/>
         </div >
     )
 }
