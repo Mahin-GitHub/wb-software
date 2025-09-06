@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full flex justify-center items-center mx-auto bg-gray-100 `}
       >
         <div className="relative sm:max-w-[375px] sm:h-[667px] w-full h-full sm:border-6 sm:border-gray-950  sm:rounded-2xl sm:shadow-2xl flex flex-col overflow-hidden my-[50px]">
-          <div className="fixed sm:absolute top-0 bg-gray-100  w-full ">
+          <div className="fixed sm:absolute top-0 bg-gray-100  w-full  z-50">
 
             <TopNavBar />
           </div>
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
 
             {children}
           </div>
-          <div className="fixed sm:absolute bottom-0 bg-white w-full ">
+          <div className="fixed sm:absolute bottom-0 bg-white w-full z-500">
             <BottomNav />
 
           </div>

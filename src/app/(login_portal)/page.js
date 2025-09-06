@@ -1,4 +1,4 @@
-
+'use client';
 import Article from '@/Components/Article/Article'
 import React from 'react'
 

@@ -1,13 +1,18 @@
 import Image from 'next/image'
 import React from 'react'
 
-const CarouselCard = () => {
+const CarouselCard = ({ sliderData, imgURL }) => {
+
+    const { title_bn, photo } = sliderData;
     return (
         <div className="w-[150px] h-[140px]  rounded-lg  flex flex-col ">
             {/* Image Section */}
             <div className="w-full h-[80px] ">
                 <Image
-                    src="/assets/newsBanner2.jpg"
+                    src={
+
+                        `${imgURL}${photo}`
+                    }
                     width={500}
                     height={500}
                     alt="cartImg"
@@ -18,7 +23,7 @@ const CarouselCard = () => {
             {/* Text Section */}
             <div className=" mt-1 flex-1 flex items-start">
                 <p className="text-sm line-clamp-3 ">
-                    মমতাকে কৃত্তিত্ব তৃণমূলের, BJP বলল, ফকজসদফল্যফেজ sdfsdfsdfsdfsdfsdfsfsdfsdfdsfsdfsdfsdfsdfsdfsdfsdfftertedsd
+                    {title_bn}
                 </p>
             </div>
         </div>
