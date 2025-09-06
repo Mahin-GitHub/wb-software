@@ -57,7 +57,7 @@ const Article = () => {
                     <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.underBrakingNewsData} />
 
 
-                    {/* </div> */}
+                   
                 </div>
             </div>
 
@@ -84,19 +84,20 @@ const Article = () => {
                             alt='Image'
                         />
                     </figure>
-                    <div className="card-body">
+                    <div className="px-2 py-4">
 
                         <p className='line-clamp-2'>{homeData?.topStoryNewsData?.title_bn}</p>
 
                     </div>
                 </div>
             </div>
-           
 
-           
+
+            {/* Top Story Sliding News Data  */}
+
             <div className="my-4">
 
-                <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.sliderNewsData} />
+                <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.topStorySlidingNewsData} />
             </div>
 
 
