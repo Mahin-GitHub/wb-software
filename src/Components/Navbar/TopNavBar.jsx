@@ -6,7 +6,7 @@ const TopNavBar = () => {
     return (
         <div >
             {/* Top Logo */}
-            <div className='w-full px-2 py-4 flex justify-center '>
+            {/* <div className='w-full px-2 py-4 flex justify-center '>
                 <div className="w-[220px]">
                     <Image
                         className="w-full h-auto"
@@ -16,7 +16,7 @@ const TopNavBar = () => {
                         alt="logo"
                     />
                 </div>
-            </div>
+            </div> */}
 
             <TopNavMenuBar/>
         </div >

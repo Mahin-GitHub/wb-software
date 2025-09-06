@@ -122,7 +122,9 @@ const TopNavMenuBar = () => {
 
                     <div className="flex items-center gap-4">
                         <div>
+                            <Link href={"/search"}>
                             <IoSearchOutline className='w-6 h-6 text-white' />
+                            </Link>
                         </div>
                         <div>
                             <FaRegUser className='w-6 h-6 text-white' />
