@@ -29,7 +29,7 @@ const Article = () => {
 
     console.log("Data --> ", homeData);
     return (
-        <div className="w-full h-auto mx-auto  bg-white  overflow-hidden">
+        <div className="w-full h-auto mt-20 mx-auto  bg-white  overflow-hidden">
             <div className='w-full   mx-auto sm:mb-12   sm:my-8  shadow-3xl bg-amber-950  '>
                 <div >
                     <div className='flex justify-between items-center   p-2 '>

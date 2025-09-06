@@ -1,7 +1,12 @@
 "use client";
 
+import Image from 'next/image';
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { IoMdMenu } from "react-icons/io";
+import { IoSearchOutline } from "react-icons/io5";
+import { FaRegUser } from "react-icons/fa6";
+
 
 const TopNavMenuBar = () => {
 
@@ -91,8 +96,42 @@ const TopNavMenuBar = () => {
     return (
 
 
-        <div className="border border-gray-300 w-full h-auto bg-white">
-            <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
+        <div className="border border-gray-300 w-full h-auto bg-white block">
+            <div className="bg-red-500 text-red p-2">
+                <div className='flex justify-between items-center '>
+                    <div className='flex justify-center items-center gap-2'>
+                        <div>
+                            <IoMdMenu className='w-8 h-8 text-white' />
+
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <div className='w-full h-8'>
+                                <Image className='w-full h-full'
+                                    src={"/assets/abp_logo.png"}
+                                    width={500}
+                                    height={500}
+                                    alt={"logo"}
+                                />
+                            </div>
+                            <div>
+                                <p className='bg-red-500 p-1 text-white'>LIVE</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                        <div>
+                            <IoSearchOutline className='w-8 h-8 text-white' />
+                        </div>
+                        <div>
+                            <FaRegUser className='w-8 h-8 text-white' />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <nav className="overflow-x-auto scrollbar-hide no-scrollbar ">
                 <div className="flex space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
                     {topNavLinks?.map((link, index) => (
                         <Link
