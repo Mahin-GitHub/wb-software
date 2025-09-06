@@ -52,17 +52,8 @@ const Article = () => {
 
 
                 <div className='w-full  mx-auto sm:mb-12   p-2  shadow-3xl  text-white'>
-                    {/* <div className="my-4 py-2 flex  items-center gap-4"> */}
-                    {/* {
-                            homeData?.sliderNewsData?.map((sliderData, index) => {
-                                return (
-                                    <div key={index}>
-                                        <CarouselCard sliderData={sliderData} imgURL={imgURL} />
-                                    </div>
-                                )
-                            })
-                        } */}
-                    <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.sliderNewsData} />
+
+                    <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.underBrakingNewsData} />
 
 
                     {/* </div> */}
