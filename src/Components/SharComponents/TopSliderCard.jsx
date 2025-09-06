@@ -33,7 +33,7 @@ const TopSliderCard = ({ imgURL, topNavSliderData }) => {
                 
             >
                 {topNavSliderData?.map((sliderData, index) => (
-                    <SwiperSlide key={index} className="flex h-full">
+                    <SwiperSlide key={index} className="flex  h-full">
                         <CarouselCard sliderData={sliderData} imgURL={imgURL} />
                     </SwiperSlide>
                 ))}

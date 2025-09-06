@@ -1,10 +1,43 @@
-import React from 'react'
+"use client";
+import NewsCard from '@/Components/SharComponents/NewsCard'
+import React, { useEffect, useState } from 'react'
 
 const Blog = () => {
+
+  const [homeData, setHomeData] = useState({});
+
+  useEffect(() => {
+    fetch("https://wbsoft.work/api/get-homepage-data-for-mobile")
+      .then(res => res.json())
+      .then(data => setHomeData(data))
+  }, []);
+
+  const imgURL = "https://wbsoft.work/storage/uploads/newsImg/";
+
+
   return (
-    <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 border-1 border-gray-300 shadow-3xl bg-white'>
-      <h2 className='text-orange-400 font-semibold text-3xl text-center'>Blog</h2>
-      <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual.</p>
+    <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8l bg-white'>
+      <div className='w-full h-auto mx-auto sm:mb-12 px-2     shadow-3xl bg-white'>
+
+
+        <div>
+
+
+          {
+            homeData?.lattestNewsData?.map((cardNews, index) => {
+              return (
+                <div key={index}>
+                  <NewsCard cardNews={cardNews} imgURL={imgURL} />
+
+                </div>
+              )
+            })
+          }
+
+        </div>
+
+      </div>
+
     </div>
   )
 }

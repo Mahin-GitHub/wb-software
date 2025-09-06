@@ -5,9 +5,9 @@ const CarouselCard = ({ sliderData, imgURL }) => {
 
     const { title_bn, photo } = sliderData;
     return (
-        <div className="w-[150px] h-[140px]  rounded-lg  flex flex-col ">
+        <div className=" w-full h-full rounded-lg  flex flex-col ">
             {/* Image Section */}
-            <div className="w-full h-[80px] ">
+            <div className="w-full  ">
                 <Image
                     src={
 

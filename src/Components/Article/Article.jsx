@@ -136,10 +136,9 @@ const Article = () => {
                     <h2 className=' font-bold'>রাষ্ট্রীয় খবর </h2>
                     <p className="text-red-500">see all</p>
                 </div>
-                <div>
+                <div className="my-4">
 
-                    <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.sliderNewsData} />
-
+                    <TopSliderCard imgURL={imgURL} topNavSliderData={homeData?.countryWiseNewsData} />
                 </div>
 
 
@@ -174,7 +173,7 @@ const Article = () => {
                     <h2 className=' font-bold'>TV Show </h2>
                     <p className="text-red-500">see all</p>
                 </div>
-                <SwiperSlider />
+                <SwiperSlider imgURL={imgURL} photoGallaryData={homeData?.photoGalleryNewsData} />
             </div>
 
 
@@ -185,11 +184,22 @@ const Article = () => {
                     <p className="text-red-500">see all</p>
                 </div>
 
+
                 <div>
-                    {/* <NewsCard />
-                    <NewsCard />
-                    <NewsCard />
-                    <NewsCard /> */}
+
+
+                    {
+                        homeData?.lattestNewsData?.map((cardNews, index) => {
+                            return (
+                                <div key={index}>
+                                    <NewsCard cardNews={cardNews} imgURL={imgURL} />
+
+                                </div>
+                            )
+                        })
+                    }
+
+
 
                 </div>
 
