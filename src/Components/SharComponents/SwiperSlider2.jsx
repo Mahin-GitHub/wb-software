@@ -12,6 +12,7 @@ import 'swiper/css/effect-cards';
 // import required modules
 import { EffectCards } from 'swiper/modules';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const SwiperSlider2 = ({ webStoryGallary, imgURL }) => {
@@ -30,6 +31,7 @@ const SwiperSlider2 = ({ webStoryGallary, imgURL }) => {
                         webStoryGallary?.map((webStoryData, index) => {
                             return (
                                 <SwiperSlide key={index}>
+                                    <Link href={`news-details/${webStoryData?.slug_bn}`}>
                                     <div className="card w-full shadow-sm bg-white">
                                         <figure>
                                             <Image
@@ -46,6 +48,7 @@ const SwiperSlider2 = ({ webStoryGallary, imgURL }) => {
 
                                         </div>
                                     </div>
+                                    </Link>
                                 </SwiperSlide>
 
                             )

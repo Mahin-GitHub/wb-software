@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import Link from 'next/link';
 
 
 const SwiperSlider = ({ photoGallaryData, imgURL }) => {
@@ -39,22 +40,24 @@ const SwiperSlider = ({ photoGallaryData, imgURL }) => {
                         photoGallaryData?.map((gallaryData, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <div className="card w-full shadow-sm bg-white">
-                                        <figure>
-                                            <Image
-                                                className='w-full h-full'
-                                                src={`${imgURL}${gallaryData?.photo}`}
-                                                width={500}
-                                                height={500}
-                                                alt='Image'
-                                            />
-                                        </figure>
-                                        <div className="card-body">
+                                    <Link href={`news-details/${gallaryData?.slug_bn}`}>
+                                        <div className="card w-full shadow-sm bg-white">
+                                            <figure>
+                                                <Image
+                                                    className='w-full h-full'
+                                                    src={`${imgURL}${gallaryData?.photo}`}
+                                                    width={500}
+                                                    height={500}
+                                                    alt='Image'
+                                                />
+                                            </figure>
+                                            <div className="card-body">
 
-                                            <p className='line-clamp-2'>{gallaryData?.title_bn}</p>
+                                                <p className='line-clamp-2'>{gallaryData?.title_bn}</p>
 
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </SwiperSlide>
                             )
                         })

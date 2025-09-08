@@ -12,6 +12,7 @@ import SwiperSlider2 from '../SharComponents/SwiperSlider2';
 import TopNavSliderImg from '../SharComponents/TopNavSliderImg';
 import TopSliderCard from '../SharComponents/TopSliderCard';
 import TopNewsSlider from '../SharComponents/TopNewsSlider';
+import Link from 'next/link';
 
 
 
@@ -44,6 +45,7 @@ const Article = () => {
                     {/* Top News Slider  */}
 
                     <div>
+
                         <TopNewsSlider imgURL={imgURL} topNewsData={homeData?.brakingNewsData} />
                     </div>
 
@@ -75,20 +77,22 @@ const Article = () => {
                     <p className="text-red-500">see all</p>
                 </div>
                 <div className="card w-full shadow-sm">
-                    <figure>
-                        <Image
-                            className='w-full h-full'
-                            src={`${imgURL}${homeData?.topStoryNewsData?.photo}`}
-                            width={500}
-                            height={500}
-                            alt='Image'
-                        />
-                    </figure>
-                    <div className="px-2 py-4">
+                    <Link href={`news-details/${homeData?.topStoryNewsData?.slug_bn}`}>
+                        <figure>
+                            <Image
+                                className='w-full h-full'
+                                src={`${imgURL}${homeData?.topStoryNewsData?.photo}`}
+                                width={500}
+                                height={500}
+                                alt='Image'
+                            />
+                        </figure>
+                        <div className="px-2 py-4">
 
-                        <p className='line-clamp-2'>{homeData?.topStoryNewsData?.title_bn}</p>
+                            <p className='line-clamp-2'>{homeData?.topStoryNewsData?.title_bn}</p>
 
-                    </div>
+                        </div>
+                    </Link>
                 </div>
             </div>
 
@@ -117,7 +121,9 @@ const Article = () => {
                         homeData?.lattestNewsData?.map((cardNews, index) => {
                             return (
                                 <div key={index}>
-                                    <NewsCard cardNews={cardNews} imgURL={imgURL} />
+                                    <Link href={`news-details/${cardNews?.slug_bn}`}>
+                                        <NewsCard cardNews={cardNews} imgURL={imgURL} />
+                                    </Link>
 
                                 </div>
                             )
@@ -192,7 +198,9 @@ const Article = () => {
                         homeData?.lattestNewsData?.map((cardNews, index) => {
                             return (
                                 <div key={index}>
-                                    <NewsCard cardNews={cardNews} imgURL={imgURL} />
+                                    <Link href={`news-details/${cardNews?.slug_bn}`}>
+                                        <NewsCard cardNews={cardNews} imgURL={imgURL} />
+                                    </Link>
 
                                 </div>
                             )

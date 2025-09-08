@@ -14,6 +14,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
 import CarouselCard from './CarouselCard';
+import Link from 'next/link';
 
 
 
@@ -28,13 +29,15 @@ const TopSliderCard = ({ imgURL, topNavSliderData }) => {
                 slidesPerView={3}
                 spaceBetween={30}
                 freeMode={true}
-              
+
                 modules={[FreeMode]}
-                
+
             >
                 {topNavSliderData?.map((sliderData, index) => (
                     <SwiperSlide key={index} className="flex  h-full">
-                        <CarouselCard sliderData={sliderData} imgURL={imgURL} />
+                        <Link href={`news-details/${sliderData?.slug_bn}`}>
+                            <CarouselCard sliderData={sliderData} imgURL={imgURL} />
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>
