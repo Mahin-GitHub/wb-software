@@ -8,6 +8,7 @@ const Search = () => {
 
     const [term, setTerm] = useState("");
     const [results, setResults] = useState([]);
+    const [debouncedTerm, setDebouncedTerm] = useState(term);
     const imgURL = "https://wbsoft.work/storage/uploads/newsImg/";
 
 
@@ -26,12 +27,11 @@ const Search = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         handleSearch();
-
-        console.log("handle click");
+        setTerm("");
 
     }
 
-    console.log("results", results);
+
 
 
     return (
@@ -88,6 +88,8 @@ const Search = () => {
                         })
                     }
                 </div>
+
+           
 
             </div>
         </div>

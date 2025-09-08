@@ -1,32 +1,35 @@
-import React from 'react'
+import NewsCard from "@/Components/SharComponents/NewsCard";
+import Link from "next/link";
 
-const Category = async ({ params }) => {
+const CategoryPage = async ({ params }) => {
+    const slug = params.slug;
 
-    const paramsData = await params.slug;
+    // API fetch
+    const res = await fetch(`https://wbsoft.work/api/category-wise-news/${slug}`);
+    const categoryWiseData = await res.json();
+    console.log(categoryWiseData);
 
-    const res = await fetch(`https://wbsoft.work/api/category-wise-news/${paramsData}`);
-    const categoryData = await res.json();
-    console.log("Data --> ", categoryData);
-
-
+    const imgURL = "https://wbsoft.work/storage/uploads/newsImg/";
     return (
-        <div className='mt-20'>
-            Category Data: {paramsData}
-            <h2></h2>
+        <div className="my-10 sm:mb-10 sm:mt-20">
 
-            {/* <div>
+            <div>
                 {
-                    categoryData?.map((category, index) => {
+                    categoryWiseData?.newsData?.data?.map((cardNews, index) => {
                         return (
-                            <div>
+                            <div key={index}>
+                                <Link href={`/news-details/${cardNews?.slug_bn}`}>
+                                    <NewsCard cardNews={cardNews} imgURL={imgURL} />
+                                </Link>
 
                             </div>
                         )
                     })
                 }
-            </div> */}
+               
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Category
+export default CategoryPage;
