@@ -19,7 +19,7 @@ import Link from 'next/link';
 const Article = () => {
 
     const [homeData, setHomeData] = useState({});
-
+ 
     useEffect(() => {
         fetch("https://wbsoft.work/api/get-homepage-data-for-mobile")
             .then(res => res.json())
