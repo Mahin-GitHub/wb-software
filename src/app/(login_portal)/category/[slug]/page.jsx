@@ -11,7 +11,7 @@ const CategoryPage = async ({ params }) => {
 
     const imgURL = "https://wbsoft.work/storage/uploads/newsImg/";
     return (
-        <div className="my-10 sm:mb-10 sm:mt-20">
+        <div className="my-10 sm:my-10 ">
 
             <div>
                 {
@@ -26,7 +26,7 @@ const CategoryPage = async ({ params }) => {
                         )
                     })
                 }
-               
+
             </div>
         </div>
     );

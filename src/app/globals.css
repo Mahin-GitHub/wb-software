@@ -21,3 +21,8 @@ body {
   scrollbar-width: none;
   /* Firefox */
 }
+
+
+.skeleton {
+  @apply bg-gray-300 dark:bg-gray-300;
+}

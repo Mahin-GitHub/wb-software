@@ -13,13 +13,15 @@ import TopNavSliderImg from '../SharComponents/TopNavSliderImg';
 import TopSliderCard from '../SharComponents/TopSliderCard';
 import TopNewsSlider from '../SharComponents/TopNewsSlider';
 import Link from 'next/link';
+import ArticleSkeleton from '../Skeleton/ArticleSkeleton';
 
 
 
 const Article = () => {
 
-    const [homeData, setHomeData] = useState({});
- 
+    const [homeData, setHomeData] = useState(null);
+
+
     useEffect(() => {
         fetch("https://wbsoft.work/api/get-homepage-data-for-mobile")
             .then(res => res.json())
@@ -28,7 +30,10 @@ const Article = () => {
 
     const imgURL = "https://wbsoft.work/storage/uploads/newsImg/";
 
-    console.log("Data --> ", homeData);
+    if (!homeData) {
+        return <ArticleSkeleton />
+    }
+
     return (
         <div className="w-full h-auto mt-8 mx-auto  bg-white  overflow-hidden">
             <div className='w-full   mx-auto sm:mb-12   sm:my-8  shadow-3xl bg-amber-950  '>
