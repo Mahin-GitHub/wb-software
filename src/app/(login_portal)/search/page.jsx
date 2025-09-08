@@ -1,16 +1,94 @@
-import React from 'react'
+"use client";
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 
 const Search = () => {
+
+    const [term, setTerm] = useState("");
+    const [results, setResults] = useState([]);
+    const imgURL = "https://wbsoft.work/storage/uploads/newsImg/";
+
+
+    const handleSearch = async () => {
+        const res = await fetch("https://wbsoft.work/api/search-news-data", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ search_value: term }),
+        });
+        const data = await res.json();
+        setResults(data?.searchNewsData?.data || []);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleSearch();
+
+        console.log("handle click");
+
+    }
+
+    console.log("results", results);
+
+
     return (
         <div className="w-full ">
-            <div className='w-full flex justify-center items-center gap-4 mt-8 sm:mt-20'>
-                <div>
-                    <FaSearch />
+            <div className='w-full mt-8 sm:mt-20'>
+                <div className="flex justify-center items-center gap-4">
+
+                    <div>
+                        <FaSearch />
+                    </div>
+                    <div>
+                        <form action="" onSubmit={handleSubmit}>
+
+                            <input
+                                type="text"
+                                value={term}
+                                onChange={(e) => setTerm(e.target.value)}
+                                placeholder="Search Keyword"
+                                className="outline-0 border-b-1 flex-grow"
+                            />
+
+                        </form>
+
+                    </div>
+                    <button onClick={handleSubmit} type="submit" className='bg-blue-400 p-1 cursor-pointer'>Search</button>
                 </div>
-                <div>
-                    <input type="text" placeholder="Search Keyword" className="outline-0 border-b-1" />
+
+                <div className='mt-10'>
+
+                    {
+                        results?.map((data, index) => {
+                            return (
+
+                                <div key={index} className="card w-full shadow-sm">
+                                    <Link href={`news-details/${data?.slug_bn}`}>
+                                        <figure>
+                                            <Image
+                                                className='w-full h-full'
+                                                src={`${imgURL}${data?.photo}`}
+                                                width={500}
+                                                height={500}
+                                                alt='Image'
+                                            />
+                                        </figure>
+                                        <div className="px-2 py-4">
+
+                                            <p className='line-clamp-2'>{data?.title_bn}</p>
+
+                                        </div>
+                                    </Link>
+
+                                </div>
+                            )
+                        })
+                    }
                 </div>
+
             </div>
         </div>
     )

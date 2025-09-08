@@ -26,7 +26,7 @@ const Article = () => {
             .then(data => setHomeData(data))
     }, []);
 
-    const imgURL = "https://wbsoft.work/storage/uploads/newsImg/"
+    const imgURL = "https://wbsoft.work/storage/uploads/newsImg/";
 
     console.log("Data --> ", homeData);
     return (
