@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
                         <DashboardTopNavbar />
                     </div>
 
-                    <div className="flex-1 overflow-y-auto no-scrollbar my-8  px-2 w-full h-full  ">
+                    <div className="flex-1 overflow-y-auto no-scrollbar my-4 sm:my-16  px-2 w-full h-full  ">
 
                         {children}
                     </div>

@@ -20,7 +20,7 @@ const Profile = () => {
 
     return (
         <>
-            <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 border-1 border-gray-300 shadow-3xl bg-white'>
+            <div className='w-full h-auto mx-auto  p-2  border-1 border-gray-300 shadow-3xl bg-white rounded-sm '>
 
                 <div className='flex justify-start items-center gap-4'>
                     <div className='w-[130px] h-[130px] border'>

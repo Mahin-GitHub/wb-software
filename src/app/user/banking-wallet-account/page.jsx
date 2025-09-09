@@ -17,7 +17,7 @@ const BankingWaletAccount = () => {
         return <WalletAccountSkeleton />;
     }
     return (
-        <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 border-1 border-gray-300 shadow-3xl bg-white'>
+        <div className='w-full h-auto mx-auto  p-2 border-1 border-gray-300 shadow-sm rounded-sm bg-white'>
             <div className='flex justify-center items-center w-full mb-2'>
 
                 <h2 className='w-full bg-orange-400 p-2 text-white text-center text-lg font-bold rounded-sm'>Sorry, Account Not Found.!</h2>

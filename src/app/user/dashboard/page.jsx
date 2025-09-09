@@ -24,8 +24,8 @@ const Dashboard = () => {
     }
     return (
 
-        <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:mt-8  bg-white'>
-            <div className="w-full h-auto mx-auto px-2 py-4  
+        <div className='w-full h-auto mx-auto  '>
+            <div className="w-full h-auto mx-auto p-2  
     border border-gray-300 shadow-sm bg-white 
     flex justify-around items-center text-center">
 
@@ -213,8 +213,6 @@ const Dashboard = () => {
                     <IoDocumentTextSharp className='text-xl font-bold w-8 h-8 text-orange-400' />
                     <p>Documentation</p>
                 </div>
-
-
 
             </div>
         </div>
