@@ -87,27 +87,7 @@ const Register = () => {
             </div>
 
             {/* Profession */}
-            <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Profession <span className="text-red-500">(required)</span>
-                </label>
-                <select className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-700">
-                    <option value="14" data-select2-id="select2-data-8-x2z9">Pharmacist</option>
-                    <option >Digital Marketer</option>
-                    <option >Architect</option>
-                    <option >Nurse</option>
-                    <option >Accountant</option>
-                    <option >Data Scientist</option>
-                    <option >Civil Engineer</option>
-                    <option >Mechanical Engineer</option>
-                    <option >Graphic Designer</option>
-                    <option >Business Analyst</option>
-                    <option >Lawyer</option>
-                    <option >Teacher</option>
-                    <option >Doctor</option>
-                    <option >Software Engineer</option>
-                </select>
-            </div>
+          
             <div className="mb-4 ">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                     Profession <span className="text-red-500">(required)</span>
