@@ -1,13 +1,27 @@
 "use client";
+import CategoryCardSkeleton from "@/Components/Skeleton/CategoryCardSkeleton";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Blog = () => {
 
   const [language, setLanguage] = useState(false);
+  const [showSkeleton, setShowSkeleton] = useState(true);
   const categoriesEng = ["bangladesh", "campus", "cricket", "dhaka", "education", "football", "international", "election", "america", "entertainment", "law-and-justice"];
   const categoriesBan = ["বাংলাদেশ", "ক্যাম্পাস", "ক্রিকেট", "ঢাকা", "শিক্ষা", "ফুটবল", "আন্তর্জাতিক", "নির্বাচন", "আমেরিকা", "বিনোদন", "আইন-বিচার"];
 
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+      setShowSkeleton(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (showSkeleton) {
+    return <CategoryCardSkeleton />;
+  }
   return (
 
     <div className="my-10 sm:mb-10 sm:mt-20 px-4">
