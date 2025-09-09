@@ -44,7 +44,7 @@ const Categories = () => {
             key={slug}
             href={`/category/${categoriesEng[index]}`}
           >
-            <div className="bg-white shadow-lg rounded-xl p-6 flex items-center justify-center text-center border hover:shadow-2xl hover:-translate-y-1 transition duration-300 cursor-pointer">
+            <div className="bg-white shadow-lg rounded-sm p-6 flex items-center justify-center text-center border hover:shadow-2xl hover:-translate-y-1 transition duration-300 cursor-pointer">
               <h2 className="text-lg font-semibold text-gray-800">
                 {slug.charAt(0).toUpperCase() + slug.slice(1)}
               </h2>

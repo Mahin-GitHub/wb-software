@@ -14,7 +14,7 @@ const CategoryCardSkeleton = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, i) => (
                     <div
                         key={i}
-                        className=" shadow rounded-xl p-6 flex items-center justify-center text-center border border-gray-300"
+                        className=" shadow rounded-sm p-6 flex items-center justify-center text-center border border-gray-300"
                     >
                         <div className="h-6 w-24 bg-gray-300 rounded-md"></div>
                     </div>
