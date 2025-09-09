@@ -1,11 +1,27 @@
+"use client";
 import DashboardCard from '@/Components/SharComponents/DashboardCard';
-import React from 'react'
+import DashboardPageSkeleton from '@/Components/Skeleton/DashboardPageSkeleton';
+import React, { useEffect, useState } from 'react'
 import { BsBank } from 'react-icons/bs';
 import { FaAddressCard, FaCalculator, FaPercent, FaRegCreditCard, FaWallet } from 'react-icons/fa';
 import { FaImages, FaMobileScreen } from "react-icons/fa6";
 import { IoDocumentTextSharp } from 'react-icons/io5';
 
 const Dashboard = () => {
+
+    const [showSkeleton, setShowSkeleton] = useState(true);
+    useEffect(() => {
+
+        const timer = setTimeout(() => {
+            setShowSkeleton(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (showSkeleton) {
+        return <DashboardPageSkeleton />;
+    }
     return (
 
         <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:mt-8  bg-white'>

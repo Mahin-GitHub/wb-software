@@ -1,7 +1,8 @@
 "use client";
+import SearchPageSkeleton from '@/Components/Skeleton/SearchPageSkeleton';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 
 const Search = () => {
@@ -31,7 +32,19 @@ const Search = () => {
 
     }
 
+    const [showSkeleton, setShowSkeleton] = useState(true);
+    useEffect(() => {
 
+        const timer = setTimeout(() => {
+            setShowSkeleton(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (showSkeleton) {
+        return <SearchPageSkeleton />;
+    }
 
 
     return (
@@ -89,7 +102,7 @@ const Search = () => {
                     }
                 </div>
 
-           
+
 
             </div>
         </div>
@@ -97,3 +110,5 @@ const Search = () => {
 }
 
 export default Search
+
+

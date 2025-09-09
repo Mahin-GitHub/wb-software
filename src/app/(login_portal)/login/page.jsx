@@ -1,52 +1,69 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaPhoneAlt, FaLock } from 'react-icons/fa';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import InputField from '@/Components/SharComponents/InputField';
 import Link from 'next/link';
+import LoginPageSkeleton from '@/Components/Skeleton/LoginPageSkeleton';
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
+  const [showSkeleton, setShowSkeleton] = useState(true);
 
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+      setShowSkeleton(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (showSkeleton) {
+    return <LoginPageSkeleton />;
+  }
   return (
-    <div className="w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 border-1 border-gray-300 shadow-3xl bg-white">
-      <h2 className="text-2xl font-bold text-center text-orange-500 mb-6">Login</h2>
+    <>
 
-      {/* Mobile Input */}
+      <div className="w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 border-1 border-gray-300 shadow-3xl bg-white">
+        <h2 className="text-2xl font-bold text-center text-orange-500 mb-6">Login</h2>
 
-      <InputField icon={<FaPhoneAlt className="text-[#666666] " />} type={"text"} placeholder={"Mobile"} />
+        {/* Mobile Input */}
 
-      {/* Password Input */}
+        <InputField icon={<FaPhoneAlt className="text-[#666666] " />} type={"text"} placeholder={"Mobile"} />
 
-      <InputField icon={<FaLock className="text-[#666666]" />} type={"password"} placeholder={"Password"} />
+        {/* Password Input */}
+
+        <InputField icon={<FaLock className="text-[#666666]" />} type={"password"} placeholder={"Password"} />
 
 
-      {/* Remember me + Forgot */}
-      <div className="flex items-center justify-between my-4">
-        <label className="flex items-center gap-2 text-sm">
-          <input type="checkbox" className="accent-blue-500 w-5 h-5" />
-          Remember me
-        </label>
-        <Link href={"/webuser/password-forgot"} className="text-sm text-orange-500 hover:underline">
-          Forgot Password
+        {/* Remember me + Forgot */}
+        <div className="flex items-center justify-between my-4">
+          <label className="flex items-center gap-2 text-sm">
+            <input type="checkbox" className="accent-blue-500 w-5 h-5" />
+            Remember me
+          </label>
+          <Link href={"/webuser/password-forgot"} className="text-sm text-orange-500 hover:underline">
+            Forgot Password
+          </Link>
+        </div>
+
+        {/* Login Button */}
+        <Link href={"/user/dashboard"}>
+          <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 rounded mb-4 cursor-pointer">
+            Login
+          </button>
         </Link>
+
+        {/* Register Link */}
+        <p className="text-center text-sm">
+          Don&apos;t have an account?
+          <Link href={"/register"} className="text-orange-500 font-medium hover:underline ml-2">
+            Register
+          </Link>
+        </p>
       </div>
-
-      {/* Login Button */}
-      <Link href={"/user/dashboard"}>
-        <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 rounded mb-4 cursor-pointer">
-          Login
-        </button>
-      </Link>
-
-      {/* Register Link */}
-      <p className="text-center text-sm">
-        Don&apos;t have an account?
-        <Link href={"/register"} className="text-orange-500 font-medium hover:underline ml-2">
-          Register
-        </Link>
-      </p>
-    </div>
+    </>
   );
 }

@@ -1,9 +1,25 @@
+"use client";
+import ContactPageSkeleton from '@/Components/Skeleton/ContactPageSkeleton';
 import Link from 'next/link';
-import React from 'react'
+import { useEffect, useState } from 'react';
+
 import { IoLocationSharp } from "react-icons/io5";
 import { SiPaloaltosoftware } from "react-icons/si";
 
 const Contact = () => {
+  const [showSkeleton, setShowSkeleton] = useState(true);
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+      setShowSkeleton(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (showSkeleton) {
+    return <ContactPageSkeleton />;
+  }
   return (
     <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 bg-white' >
 

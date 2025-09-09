@@ -1,8 +1,22 @@
+"use client";
+import ProfileSkeleton from '@/Components/Skeleton/ProfileSkeleton';
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Profile = () => {
+    const [showSkeleton, setShowSkeleton] = useState(true);
+    useEffect(() => {
 
+        const timer = setTimeout(() => {
+            setShowSkeleton(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (showSkeleton) {
+        return <ProfileSkeleton />;
+    }
 
     return (
         <>

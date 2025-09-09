@@ -1,11 +1,25 @@
 "use client"
 import InputField from '@/Components/SharComponents/InputField'
+import RegisterPageSkeleton from '@/Components/Skeleton/RegisterPageSkeleton'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaEnvelope, FaEye, FaLock, FaMapMarkerAlt, FaMars, FaPhoneAlt, FaUser, FaVenus, FaWallet } from 'react-icons/fa'
 
 const Register = () => {
     const [selected, setSelected] = useState("");
+    const [showSkeleton, setShowSkeleton] = useState(true);
+    useEffect(() => {
+
+        const timer = setTimeout(() => {
+            setShowSkeleton(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (showSkeleton) {
+        return <RegisterPageSkeleton />;
+    }
     return (
 
         <div className='w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 border-1 border-gray-300 shadow-3xl bg-white'>
