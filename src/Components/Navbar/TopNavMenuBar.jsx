@@ -73,32 +73,35 @@ const TopNavMenuBar = () => {
                 </div>
             </div>
 
-            {/* Language Toggle */}
-            {/* <div className="flex justify-center py-3">
-                <button
-                    onClick={() => setLanguage(!language)}
-                    className="px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-md hover:scale-105 transition-transform"
-                >
-                    {language ? "Switch to বাংলা" : "Switch to English"}
-                </button>
-            </div> */}
 
             {/* Scrollable Category Menu */}
             <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
                 <div className="flex space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
-                    {(language ? categoriesEng : categoriesBan).map((slug, index) => (
-                        <Link
-                            key={index}
-                            onClick={() => setActiveIndex(index)}
-                            href={`/category/${categoriesEng[index]}`} 
-                            className={` p-2 transition ${activeIndex === index
-                                    ? "text-black border-b-2 border-b-black"
-                                    : "text-gray-500 border-transparent"
-                                }`}
-                        >
-                            {slug.charAt(0).toUpperCase() + slug.slice(1)}
-                        </Link>
-                    ))}
+                    {categoriesBan.map((slug, index) => {
+                        // <Link
+                        //     key={index}
+                        //     onClick={() => setActiveIndex(index)}
+                        //     href={`/category/${categoriesEng[index]}`} 
+                        //     className={` p-2 transition ${activeIndex === index
+                        //             ? "text-black border-b-2 border-b-black"
+                        //             : "text-gray-500 border-transparent"
+                        //         }`}
+                        // >
+                        //     {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                        // </Link>
+                        return (
+                            <div key={index}>
+                                <Link
+                                    prefetch={true}
+                                    href={`/category/${categoriesEng[index]}`}
+                                >
+                                    {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                                </Link>
+
+                            </div>
+                        )
+
+                    })}
                 </div>
             </nav>
         </div>
