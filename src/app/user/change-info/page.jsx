@@ -46,28 +46,40 @@ const ChangeInfo = () => {
 
                 {/* Profession */}
 
-                <div className="mb-4 ">
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+
+                <div className="w-full mb-4 bg-gray-100 rounded-sm">
+                     <label className="block text-sm font-medium text-gray-700 mb-1">
                         Profession <span className="text-red-500">(required)</span>
                     </label>
-                    <select className="w-full border  rounded-lg p-2 text-gray-700 focus-within:ring-4 focus-within:ring-blue-300">
-                        <option value="14" data-select2-id="select2-data-8-x2z9">Pharmacist</option>
-                        <option >Digital Marketer</option>
-                        <option >Architect</option>
-                        <option >Nurse</option>
-                        <option >Accountant</option>
-                        <option >Data Scientist</option>
-                        <option >Civil Engineer</option>
-                        <option >Mechanical Engineer</option>
-                        <option >Graphic Designer</option>
-                        <option >Business Analyst</option>
-                        <option >Lawyer</option>
-                        <option >Teacher</option>
-                        <option >Doctor</option>
-                        <option >Software Engineer</option>
-                    </select>
-                </div>
+                    
+                    <div className="flex items-stretch border rounded-lg overflow-hidden focus-within:ring-4 focus-within:ring-blue-300">
 
+                        {/* Icon Section */}
+                        <div className="bg-[#ECECEC] flex items-center justify-center px-3">
+                            <FaBriefcase className="text-[#666666]" />
+                        </div>
+
+                        {/* Select Field Section */}
+                        <select
+                            className="flex-1 bg-white pl-1 pr-3 py-2 outline-none text-gray-700"
+                        >
+                            <option value="Pharmacist">Pharmacist</option>
+                            <option value="Digital Marketer">Digital Marketer</option>
+                            <option value="Architect">Architect</option>
+                            <option value="Nurse">Nurse</option>
+                            <option value="Accountant">Accountant</option>
+                            <option value="Data Scientist">Data Scientist</option>
+                            <option value="Civil Engineer">Civil Engineer</option>
+                            <option value="Mechanical Engineer">Mechanical Engineer</option>
+                            <option value="Graphic Designer">Graphic Designer</option>
+                            <option value="Business Analyst">Business Analyst</option>
+                            <option value="Lawyer">Lawyer</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Doctor">Doctor</option>
+                            <option value="Software Engineer">Software Engineer</option>
+                        </select>
+                    </div>
+                </div>
                 {/* Gender */}
                 <label className="block mb-2 text-sm font-semibold text-gray-700">
                     Gender <span className="text-red-500">(required)</span>
