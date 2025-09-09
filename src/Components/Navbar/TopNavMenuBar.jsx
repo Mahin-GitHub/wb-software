@@ -78,28 +78,32 @@ const TopNavMenuBar = () => {
             <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
                 <div className="flex space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
                     {categoriesBan.map((slug, index) => {
-                        // <Link
-                        //     key={index}
-                        //     onClick={() => setActiveIndex(index)}
-                        //     href={`/category/${categoriesEng[index]}`} 
-                        //     className={` p-2 transition ${activeIndex === index
-                        //             ? "text-black border-b-2 border-b-black"
-                        //             : "text-gray-500 border-transparent"
-                        //         }`}
-                        // >
-                        //     {slug.charAt(0).toUpperCase() + slug.slice(1)}
-                        // </Link>
                         return (
-                            <div key={index}>
-                                <Link
-                                    prefetch={true}
-                                    href={`/category/${categoriesEng[index]}`}
-                                >
-                                    {slug.charAt(0).toUpperCase() + slug.slice(1)}
-                                </Link>
 
-                            </div>
+                            <Link
+                                key={index}
+                                prefetch={true}
+                                onClick={() => setActiveIndex(index)}
+                                href={`/category/${categoriesEng[index]}`}
+                                className={` p-2 transition ${activeIndex === index
+                                    ? "text-black border-b-2 border-b-black"
+                                    : "text-gray-500 border-transparent"
+                                    }`}
+                            >
+                                {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                            </Link>
                         )
+                        // return (
+                        //     <div key={index}>
+                        //         <Link
+                        //             prefetch={true}
+                        //             href={`/category/${categoriesEng[index]}`}
+                        //         >
+                        //             {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                        //         </Link>
+
+                        //     </div>
+                        // )
 
                     })}
                 </div>
