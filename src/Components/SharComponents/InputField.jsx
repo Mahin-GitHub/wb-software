@@ -4,9 +4,9 @@ import React from 'react'
 const InputField = ({ icon, type, placeholder }) => {
 
   return (
- 
 
-    <div className="w-full mb-2 bg-gray-100 rounded-xl">
+
+    <div className="w-full mb-2 bg-gray-100 rounded-sm">
       <div className="flex items-stretch border rounded-lg overflow-hidden focus-within:ring-4 focus-within:ring-blue-300">
 
         {/* Icon Section */}
