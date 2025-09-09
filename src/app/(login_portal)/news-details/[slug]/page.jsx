@@ -16,7 +16,10 @@ const page = async ({ params }) => {
 
     return (
         <>
-            <NewsDetails newsDetails={newsDetails} imgURL={imgURL} singleData={singleData} />
+            <div className='w-full overflow-hidden'>
+
+                <NewsDetails newsDetails={newsDetails} imgURL={imgURL} singleData={singleData} />
+            </div>
         </>
     )
 }

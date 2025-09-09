@@ -26,7 +26,7 @@ const NewsCard = ({ cardNews, imgURL }) => {
     return (
         <div>
 
-            <div className='w-full h-full flex justify-between items-center gap-4 shadow-sm mb-2 p-2'>
+            <div className='w-full h-full flex justify-between items-center gap-4  rounded-sm shadow-sm mb-2 p-2 bg-white'>
                 <div className=''>
 
                     <p className='sm:w-[220px] line-clamp-3 text-sm '>{title_bn}</p>
