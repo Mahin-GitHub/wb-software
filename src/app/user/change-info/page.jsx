@@ -1,13 +1,27 @@
 
 "use client";
 
+import ChangeInfoSkeleton from "@/Components/SharComponents/ChangeInfoSkeleton";
 import InputField from "@/Components/SharComponents/InputField";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaUser, FaEnvelope, FaBriefcase, FaMapMarkerAlt, FaMars, FaVenus } from "react-icons/fa";
 
 
 const ChangeInfo = () => {
     const [gender, setGender] = useState("Male");
+    const [showSkeleton, setShowSkeleton] = useState(true);
+    useEffect(() => {
+
+        const timer = setTimeout(() => {
+            setShowSkeleton(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (showSkeleton) {
+        return <ChangeInfoSkeleton />;
+    }
     return (
         <div className='w-full h-auto mx-auto  p-4  border-1 border-gray-300 shadow-sm bg-white rounded-sm mb-2'>
             <div className="">

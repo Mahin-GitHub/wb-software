@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 import { FaEnvelope, FaEye, FaLock, FaMapMarkerAlt, FaMars, FaPhoneAlt, FaUser, FaVenus, FaWallet } from 'react-icons/fa'
 
 const Register = () => {
-    const [selected, setSelected] = useState("");
+    const [selected, setSelected] = useState("male");
     const [showSkeleton, setShowSkeleton] = useState(true);
     useEffect(() => {
 
