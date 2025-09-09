@@ -30,7 +30,7 @@ const NewsDetails = ({ singleData, imgURL, newsDetails }) => {
     }
     return (
         <div>
-            <div className="mt-8 mb-4 sm:mt-20 sm:mb-10 w-full">
+            <div className="sm:mt-8 w-full">
                 <div className="w-full">
                     <Image className="w-full"
                         src={`${imgURL}${singleData?.photo}`}

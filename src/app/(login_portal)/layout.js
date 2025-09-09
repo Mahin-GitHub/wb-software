@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
             <TopNavBar />
           </div>
 
-          <div className="flex-1 overflow-y-auto no-scrollbar my-8  px-2 w-full h-full sm:mt-20 mt-10 ">
+          <div className="flex-1 overflow-y-auto no-scrollbar mt-15 mb-8  px-2 w-full h-full sm:mt-20  ">
             {children}
           </div>
           <div className="fixed sm:absolute bottom-0 bg-white w-full z-500">

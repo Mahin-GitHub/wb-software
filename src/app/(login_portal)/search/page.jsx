@@ -49,8 +49,8 @@ const Search = () => {
 
     return (
         <div className="w-full ">
-            <div className='w-full mt-8 sm:mt-20'>
-                <div className="flex justify-center items-center gap-4">
+            <div className='w-full mt-8 sm:mt-12'>
+                <div className="w-full flex justify-center items-center gap-4">
 
                     <div>
                         <FaSearch />

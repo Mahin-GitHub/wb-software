@@ -14,6 +14,11 @@ const BottomNav = () => {
             path_url: "/"
         },
         {
+            icon: <FaBook />,
+            text: "Category",
+            path_url: "/categories"
+        },
+        {
             icon: <CgLogIn />,
             text: "Login",
             path_url: "/login"
@@ -22,11 +27,6 @@ const BottomNav = () => {
             icon: <MdPersonAddAlt1 />,
             text: "Register",
             path_url: "/register"
-        },
-        {
-            icon: <FaBook />,
-            text: "Blog",
-            path_url: "/blog"
         },
         {
             icon: <BsTelephoneFill />,

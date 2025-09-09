@@ -26,12 +26,12 @@ const NewsCard = ({ cardNews, imgURL }) => {
     return (
         <div>
 
-            <div className='w-full flex justify-between items-center gap-4 shadow-sm mb-2 py-2'>
-                <div className='w-3/4 break-words'>
+            <div className='w-full h-full flex justify-between items-center gap-4 shadow-sm mb-2 p-2'>
+                <div className=''>
 
-                    <p className='wrap-break-word line-clamp-3 p-2'>{title_bn}</p>
+                    <p className='sm:w-[220px] line-clamp-3 text-sm '>{title_bn}</p>
                 </div>
-                <div className=" w-1/2 ">
+                <div className="sm:w-[350px] h-[50px]  ">
                     <Image
                         src={`${imgURL}${photo}`}
                         width={500}

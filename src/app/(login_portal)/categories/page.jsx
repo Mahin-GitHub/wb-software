@@ -3,7 +3,7 @@ import CategoryCardSkeleton from "@/Components/Skeleton/CategoryCardSkeleton";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const Blog = () => {
+const Categories = () => {
 
   const [language, setLanguage] = useState(false);
   const [showSkeleton, setShowSkeleton] = useState(true);
@@ -24,7 +24,7 @@ const Blog = () => {
   }
   return (
 
-    <div className="my-10 sm:mb-10 sm:mt-20 px-4">
+    <div className=" px-4 sm:my-10 ">
       <h1 className="text-3xl font-bold mb-6 text-center">All Categories</h1>
 
       {/* Language Toggle Button */}
@@ -56,4 +56,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Categories;

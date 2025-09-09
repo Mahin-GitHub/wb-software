@@ -4,7 +4,7 @@ import { SliderSkeleton } from "./SliderSkeleton";
 
 const ArticleSkeleton = () => {
   return (
-    <div className="w-full h-auto mt-8 mx-auto bg-white overflow-hidden space-y-6">
+    <div className="w-full h-auto sm:mt-4 mx-auto bg-white overflow-hidden space-y-6">
 
       {/* Top News */}
       <div className="w-full shadow-3xl bg-gray-300 p-2">

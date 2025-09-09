@@ -6,11 +6,12 @@ import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 const TopNavMenuBar = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [language, setLanguage] = useState(false);
-
+    const pathname = usePathname();
     const categoriesEng = [
         "bangladesh",
         "campus",
@@ -78,14 +79,16 @@ const TopNavMenuBar = () => {
             <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
                 <div className="flex space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
                     {categoriesBan.map((slug, index) => {
+                        const categorySlug = categoriesEng[index]; 
+                        const isActive = pathname === `/category/${categorySlug}`; 
                         return (
 
                             <Link
                                 key={index}
                                 prefetch={true}
                                 onClick={() => setActiveIndex(index)}
-                                href={`/category/${categoriesEng[index]}`}
-                                className={` p-2 transition ${activeIndex === index
+                                href={`/category/${categorySlug}`}
+                                className={` p-2 transition ${isActive
                                     ? "text-black border-b-2 border-b-black"
                                     : "text-gray-500 border-transparent"
                                     }`}
@@ -93,17 +96,7 @@ const TopNavMenuBar = () => {
                                 {slug.charAt(0).toUpperCase() + slug.slice(1)}
                             </Link>
                         )
-                        // return (
-                        //     <div key={index}>
-                        //         <Link
-                        //             prefetch={true}
-                        //             href={`/category/${categoriesEng[index]}`}
-                        //         >
-                        //             {slug.charAt(0).toUpperCase() + slug.slice(1)}
-                        //         </Link>
 
-                        //     </div>
-                        // )
 
                     })}
                 </div>
