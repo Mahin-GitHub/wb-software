@@ -21,10 +21,10 @@ const Contact = () => {
     return <ContactPageSkeleton />;
   }
   return (
-    <div className='w-full h-auto mx-auto  px-2  sm:py-4 sm:mt-6 bg-white' >
+    <div className='w-full h-auto mx-auto  px-2  sm:py-4 sm:mt-6 ' >
 
       <Link href={"#"}>
-        <div className='w-full h-full mx-auto mb-4  p-4 border-1 border-gray-300 shadow-3xl bg-white '>
+        <div className='w-full h-full mx-auto mb-4  p-4 border-1 border-gray-300 shadow-sm rounded-sm bg-white '>
           <h2 className='text-orange-400 font-semibold text-3xl text-center'>About Us</h2>
           <p className='text-sm'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
 

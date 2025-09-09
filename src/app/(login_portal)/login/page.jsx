@@ -26,7 +26,7 @@ export default function LoginForm() {
   return (
     <>
 
-      <div className="w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 border-1 border-gray-300 shadow-3xl bg-white">
+      <div className="w-full h-auto mx-auto sm:mb-12 px-2  py-4 sm:my-8 border-1 border-gray-300 shadow-sm rounded-sm bg-white">
         <h2 className="text-2xl font-bold text-center text-orange-500 mb-6">Login</h2>
 
         {/* Mobile Input */}

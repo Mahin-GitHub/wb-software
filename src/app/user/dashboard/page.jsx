@@ -27,9 +27,9 @@ const Dashboard = () => {
         <div className='w-full h-auto mx-auto  '>
             <div className="w-full h-auto mx-auto p-2  
     border border-gray-300 shadow-sm bg-white 
-    flex justify-around items-center text-center">
+    flex justify-around items-center text-center rounded-sm">
 
-                <div className="w-full h-auto mx-auto bg-white flex justify-around items-center text-center">
+                <div className="w-full h-auto mx-auto bg-white flex justify-around items-center text-center  ">
                     {/* Wallet */}
                     <div className="w-1/2 px-2">
                         <h2 className="font-semibold text-2xl text-center mb-2">Wallet</h2>
@@ -88,7 +88,7 @@ const Dashboard = () => {
 
             <div className="w-full h-auto mx-auto px-2 py-4  
                   border border-gray-300 shadow-sm bg-white 
-                  flex justify-around items-center text-center">
+                  flex justify-around items-center text-center rounded-sm">
 
                 {/* 1st Column */}
                 <div className="flex-1 flex flex-col items-center justify-center">
@@ -129,7 +129,7 @@ const Dashboard = () => {
 
             <div className="w-full h-auto mx-auto  px-2 py-4  
                   border border-gray-300 shadow-sm bg-white 
-                  flex justify-around items-center text-center">
+                  flex justify-around items-center text-center rounded-sm">
 
                 {/* 1st Column */}
                 <div className="flex-1 flex flex-col items-center justify-center">
@@ -155,7 +155,7 @@ const Dashboard = () => {
 
             <div className="w-full h-auto mx-autopx-2 py-4 
                   border border-gray-300 shadow-sm bg-white 
-                  flex justify-around items-center text-center">
+                  flex justify-around items-center text-center rounded-sm">
 
                 {/* 1st Column */}
                 <div className="flex-1 flex flex-col items-center justify-center">
@@ -197,7 +197,7 @@ const Dashboard = () => {
 
             <div className="w-full h-auto mx-auto  px-2 py-4 
                   border border-gray-300 shadow-sm bg-white 
-                  flex justify-around items-center text-center">
+                  flex justify-around items-center text-center rounded-sm">
 
                 {/* 1st Column */}
                 <div className="flex-1 flex flex-col items-center justify-center">

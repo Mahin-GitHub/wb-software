@@ -9,7 +9,7 @@ const DashboardCard = ({ title, icon1, icon2, icon3, iconName1, iconName2, iconN
 
             <div className="w-full h-auto mx-auto  px-2 py-4
                   border border-gray-300 shadow-sm bg-white 
-                  flex justify-around items-center text-center">
+                  flex justify-around items-center text-center rounded-sm">
 
                 {/* 1st Column */}
                 <div className="flex-1 flex flex-col items-center justify-center">
