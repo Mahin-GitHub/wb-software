@@ -26,7 +26,7 @@ const MobileWalletAccount = () => {
       <p className='text-center text-lg'>No available account. To create an account click the link below.</p>
       <div className='flex justify-center items-center w-full mb-2'>
 
-        <button className='w-full bg-orange-400 p-2 text-white font-semibold rounded-sm'>Transaction</button>
+        <button className='w-full bg-orange-400 p-2 text-white font-semibold rounded-sm'>Create An Account</button>
       </div>
     </div>
   )
