@@ -40,7 +40,7 @@ const SwiperSlider = ({ photoGallaryData, imgURL }) => {
                         photoGallaryData?.map((gallaryData, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <Link href={`news-details/${gallaryData?.slug_bn}`}>
+                                    <Link href={`news-details/${gallaryData?.slug_bn}`}  prefetch={true}>
                                         <div className="card w-full shadow-sm bg-white">
                                             <figure>
                                                 <Image

@@ -35,7 +35,7 @@ const TopSliderCard = ({ imgURL, topNavSliderData }) => {
             >
                 {topNavSliderData?.map((sliderData, index) => (
                     <SwiperSlide key={index} className="flex  h-full">
-                        <Link href={`news-details/${sliderData?.slug_bn}`}>
+                        <Link href={`news-details/${sliderData?.slug_bn}`}  prefetch={true}>
                             <CarouselCard sliderData={sliderData} imgURL={imgURL} />
                         </Link>
                     </SwiperSlide>

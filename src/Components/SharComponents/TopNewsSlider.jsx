@@ -29,7 +29,7 @@ const TopNewsSlider = ({ topNewsData, imgURL }) => {
                         return (
 
                             <SwiperSlide key={index}>
-                                <Link href={`news-details/${slug_bn}`}>
+                                <Link href={`news-details/${slug_bn}`} prefetch={true}>
                                     <div className='w-full h-[220px]'>
 
                                         <Image

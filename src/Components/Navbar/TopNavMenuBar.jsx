@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 const TopNavMenuBar = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [language, setLanguage] = useState(false);
+
     const pathname = usePathname();
     const categoriesEng = [
         "bangladesh",
@@ -47,7 +48,9 @@ const TopNavMenuBar = () => {
                 <div className="flex justify-between items-center">
                     {/* Left Section */}
                     <div className="flex justify-center items-center gap-2">
+
                         <IoMdMenu className="w-6 h-6 text-white" />
+
                         <div className="flex items-center gap-2">
                             <div className="w-full h-8">
                                 <Image
@@ -79,8 +82,8 @@ const TopNavMenuBar = () => {
             <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
                 <div className="flex space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
                     {categoriesBan.map((slug, index) => {
-                        const categorySlug = categoriesEng[index]; 
-                        const isActive = pathname === `/category/${categorySlug}`; 
+                        const categorySlug = categoriesEng[index];
+                        const isActive = pathname === `/category/${categorySlug}`;
                         return (
 
                             <Link

@@ -82,7 +82,7 @@ const Article = () => {
                     <p className="text-red-500">see all</p>
                 </div>
                 <div className="card w-full shadow-sm">
-                    <Link href={`news-details/${homeData?.topStoryNewsData?.slug_bn}`}>
+                    <Link href={`news-details/${homeData?.topStoryNewsData?.slug_bn}`} prefetch={true}>
                         <figure>
                             <Image
                                 className='w-full h-full'
@@ -126,7 +126,7 @@ const Article = () => {
                         homeData?.lattestNewsData?.map((cardNews, index) => {
                             return (
                                 <div key={index}>
-                                    <Link href={`news-details/${cardNews?.slug_bn}`}>
+                                    <Link href={`news-details/${cardNews?.slug_bn}`}  prefetch={true}>
                                         <NewsCard cardNews={cardNews} imgURL={imgURL} />
                                     </Link>
 
@@ -203,7 +203,7 @@ const Article = () => {
                         homeData?.lattestNewsData?.map((cardNews, index) => {
                             return (
                                 <div key={index}>
-                                    <Link href={`news-details/${cardNews?.slug_bn}`}>
+                                    <Link href={`news-details/${cardNews?.slug_bn}`}  prefetch={true}>
                                         <NewsCard cardNews={cardNews} imgURL={imgURL} />
                                     </Link>
 
