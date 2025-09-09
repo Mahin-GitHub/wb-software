@@ -87,13 +87,16 @@ const Register = () => {
             </div>
 
             {/* Profession */}
-          
+
             <div className="mb-4 ">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                     Profession <span className="text-red-500">(required)</span>
                 </label>
 
-                <div className="w-full mb-2 bg-gray-100 rounded-sm">
+
+
+                <div className="w-full  bg-gray-100 rounded-sm">
+
 
                     <div className="flex items-stretch border rounded-lg overflow-hidden focus-within:ring-4 focus-within:ring-blue-300">
 
@@ -123,7 +126,6 @@ const Register = () => {
                         </select>
                     </div>
                 </div>
-
             </div>
 
 
