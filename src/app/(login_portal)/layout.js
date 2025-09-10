@@ -27,14 +27,14 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full flex justify-center items-center mx-auto bg-gray-100 `}
       >
         <div className="relative sm:max-w-[375px] sm:h-[667px] w-full h-full sm:border-6 sm:border-gray-950  sm:rounded-2xl sm:shadow-2xl flex flex-col overflow-hidden my-[50px]">
-          <div className="fixed sm:absolute top-0  w-full  z-50">
-            <TopNavBar />
-          </div>
+          {/* <div className="fixed sm:absolute top-0  w-full  z-50">
+          </div> */}
+          <TopNavBar />
 
-          <div className="flex-1 overflow-y-auto no-scrollbar mt-15 mb-8  px-2 w-full h-full sm:mt-20  ">
+          <div className="flex-1 overflow-y-auto no-scrollbar  mt-1 mb-8  px-2 w-full h-full sm:mt-8  ">
             {children}
           </div>
-          <div className="fixed sm:absolute bottom-0 bg-white w-full z-500">
+          <div className="fixed sm:absolute bottom-0 bg-white w-full z-40">
             <BottomNav />
 
           </div>

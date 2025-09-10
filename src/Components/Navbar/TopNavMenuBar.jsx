@@ -7,10 +7,13 @@ import { IoMdMenu } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+import { IoClose } from "react-icons/io5";
+
 
 const TopNavMenuBar = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [language, setLanguage] = useState(false);
+    const [isMenu, setIsMenu] = useState(false);
 
     const pathname = usePathname();
     const categoriesEng = [
@@ -42,14 +45,17 @@ const TopNavMenuBar = () => {
     ];
 
     return (
-        <div className="border border-gray-300 w-full h-auto bg-white block">
+        <div className="border border-gray-300 w-full h-auto fixed sm:absolute top-0   z-50 bg-white block no-scrollbar">
             {/* Top Header */}
             <div className="bg-red-500 p-2">
                 <div className="flex justify-between items-center">
                     {/* Left Section */}
                     <div className="flex justify-center items-center gap-2">
 
-                        <IoMdMenu className="w-6 h-6 text-white" />
+                        {
+                            isMenu ? <IoClose onClick={() => setIsMenu(false)} className="w-6 h-6 text-white" /> :
+                                <IoMdMenu onClick={() => setIsMenu(true)} className="w-6 h-6 text-white" />
+                        }
 
                         <div className="flex items-center gap-2">
                             <div className="w-full h-8">
@@ -78,8 +84,44 @@ const TopNavMenuBar = () => {
             </div>
 
 
+            {
+                isMenu && (
+                    <div className="bg-white w-full h-screen z-50 ">
+                        
+                        <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
+                            <div className="flex flex-col space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
+                                {categoriesBan.map((slug, index) => {
+                                    const handleClick = () => {
+                                        setActiveIndex(index);
+                                        setIsMenu(false);
+                                    }
+                                    const categorySlug = categoriesEng[index];
+                                    const isActive = pathname === `/category/${categorySlug}`;
+                                    return (
+                                        <Link
+                                            key={index}
+                                            prefetch={true}
+                                            onClick={handleClick}
+                                            href={`/category/${categorySlug}`}
+                                            className={` p-2 transition ${isActive
+                                                ? "text-black "
+                                                : "text-gray-500 border-transparent"
+                                                }`}
+                                        >
+                                            {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                                        </Link>
+                                    )
+
+
+                                })}
+                            </div>
+                        </nav>
+                    </div>
+                )
+            }
+
             {/* Scrollable Category Menu */}
-            <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
+            {/* <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
                 <div className="flex space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
                     {categoriesBan.map((slug, index) => {
                         const categorySlug = categoriesEng[index];
@@ -103,7 +145,7 @@ const TopNavMenuBar = () => {
 
                     })}
                 </div>
-            </nav>
+            </nav> */}
         </div>
     );
 };

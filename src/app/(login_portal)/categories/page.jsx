@@ -25,7 +25,7 @@ const Categories = () => {
   return (
 
     <div className=" px-4 sm:my-10 ">
-      <h1 className="text-3xl font-bold mb-6 text-center">All Categories</h1>
+   
 
       {/* Language Toggle Button */}
       {/* <div className="flex justify-center mb-8">
@@ -42,7 +42,8 @@ const Categories = () => {
         {(language ? categoriesEng : categoriesBan).map((slug, index) => (
           <Link
             key={slug}
-            href={`/category/${categoriesEng[index]}`}
+            href={`/category/${categoriesEng[index]} `}
+             prefetch={true}
           >
             <div className="bg-white shadow-lg rounded-sm p-6 flex items-center justify-center text-center border hover:shadow-2xl hover:-translate-y-1 transition duration-300 cursor-pointer">
               <h2 className="text-lg font-semibold text-gray-800">

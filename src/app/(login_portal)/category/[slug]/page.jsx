@@ -18,7 +18,7 @@ const CategoryPage = async ({ params }) => {
                     categoryWiseData?.newsData?.data?.map((cardNews, index) => {
                         return (
                             <div key={index}>
-                                <Link href={`/news-details/${cardNews?.slug_bn}`}>
+                                <Link href={`/news-details/${cardNews?.slug_bn}`} prefetch={true}>
                                     <NewsCard cardNews={cardNews} imgURL={imgURL} />
                                 </Link>
 
