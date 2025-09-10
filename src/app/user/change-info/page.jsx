@@ -54,9 +54,9 @@ const ChangeInfo = () => {
 
 
                     <div className="w-full  bg-gray-100 rounded-sm">
-                    
 
-                        <div className="flex items-stretch border rounded-lg overflow-hidden focus-within:ring-4 focus-within:ring-blue-300">
+
+                        <div className="flex items-stretch border rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-300">
 
                             {/* Icon Section */}
                             <div className="bg-[#ECECEC] flex items-center justify-center px-3">
