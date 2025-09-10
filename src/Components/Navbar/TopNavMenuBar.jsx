@@ -46,6 +46,114 @@ const TopNavMenuBar = () => {
 
     return (
         <div className="border border-gray-300 w-full h-auto fixed sm:absolute top-0   z-50 bg-white block no-scrollbar">
+
+            {/* Side bar  */}
+            {
+                isMenu && (
+                    <div className="bg-white w-full h-screen z-50 overflow-y-auto relative no-scrollbar ">
+                        <div className=" w-full ">
+
+                            <div className="flex justify-end p-2 my-2 ">
+                                <IoClose onClick={() => setIsMenu(false)} className="w-6 h-6 text-black" />
+                            </div>
+                            <div className="flex justify-between px-2 mb-4">
+                                <p className="font-bold text-lg">Choose Your language</p>
+                                <div className="border px-2  rounded-sm">
+                                    <select name="cars" id="cars" className="outline-0 p-1 ">
+                                        <option selected value="bangla">Bangla</option>
+                                        <option value="english">English</option>
+                                        <option value="hindi">Hindi</option>
+                                        <option value="urdu">Urdu</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div className="flex justify-between px-2 mb-4">
+                                <p className="font-bold text-lg">Dark Mode</p>
+                                <div className="border px-2  rounded-sm">
+                                    <input type="checkbox" defaultChecked className="toggle toggle-primary w-10 rounded-full" />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="join join-vertical bg-base-100 w-full">
+                            <div className="collapse collapse-arrow join-item border-base-300 border">
+                                <input type="radio" name="my-accordion-4" defaultChecked />
+                                <div className="collapse-title font-bold">Top Category</div>
+                                <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
+                                    <div className="flex flex-col space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
+                                        {categoriesBan.map((slug, index) => {
+                                            const handleClick = () => {
+                                                setActiveIndex(index);
+                                                setIsMenu(false);
+                                            }
+                                            const categorySlug = categoriesEng[index];
+                                            const isActive = pathname === `/category/${categorySlug}`;
+                                            return (
+                                                <Link
+                                                    key={index}
+                                                    prefetch={true}
+                                                    onClick={handleClick}
+                                                    href={`/category/${categorySlug}`}
+                                                    className={` p-2 text-sm transition ${isActive
+                                                        ? "text-black "
+                                                        : "text-gray-500 border-transparent"
+                                                        }`}
+                                                >
+                                                    {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                                                </Link>
+                                            )
+
+
+                                        })}
+                                    </div>
+                                </nav>
+                            </div>
+                            <div className="collapse collapse-arrow join-item border-base-300 border">
+                                <input type="radio" name="my-accordion-4" />
+                                <div className="collapse-title font-bold">Business</div>
+                                {/* <div className="collapse-content text-sm"></div> */}
+                            </div>
+                            
+                           
+                           
+                           
+                        </div>
+
+                        {/* <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
+                            <div className="flex flex-col space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
+                                {categoriesBan.map((slug, index) => {
+                                    const handleClick = () => {
+                                        setActiveIndex(index);
+                                        setIsMenu(false);
+                                    }
+                                    const categorySlug = categoriesEng[index];
+                                    const isActive = pathname === `/category/${categorySlug}`;
+                                    return (
+                                        <Link
+                                            key={index}
+                                            prefetch={true}
+                                            onClick={handleClick}
+                                            href={`/category/${categorySlug}`}
+                                            className={` p-2 transition ${isActive
+                                                ? "text-black "
+                                                : "text-gray-500 border-transparent"
+                                                }`}
+                                        >
+                                            {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                                        </Link>
+                                    )
+
+
+                                })}
+                            </div>
+                        </nav> */}
+                    </div>
+                )
+            }
+
+
             {/* Top Header */}
             <div className="bg-red-500 p-2">
                 <div className="flex justify-between items-center">
@@ -84,41 +192,6 @@ const TopNavMenuBar = () => {
             </div>
 
 
-            {
-                isMenu && (
-                    <div className="bg-white w-full h-screen z-50 ">
-                        
-                        <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
-                            <div className="flex flex-col space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
-                                {categoriesBan.map((slug, index) => {
-                                    const handleClick = () => {
-                                        setActiveIndex(index);
-                                        setIsMenu(false);
-                                    }
-                                    const categorySlug = categoriesEng[index];
-                                    const isActive = pathname === `/category/${categorySlug}`;
-                                    return (
-                                        <Link
-                                            key={index}
-                                            prefetch={true}
-                                            onClick={handleClick}
-                                            href={`/category/${categorySlug}`}
-                                            className={` p-2 transition ${isActive
-                                                ? "text-black "
-                                                : "text-gray-500 border-transparent"
-                                                }`}
-                                        >
-                                            {slug.charAt(0).toUpperCase() + slug.slice(1)}
-                                        </Link>
-                                    )
-
-
-                                })}
-                            </div>
-                        </nav>
-                    </div>
-                )
-            }
 
             {/* Scrollable Category Menu */}
             {/* <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
