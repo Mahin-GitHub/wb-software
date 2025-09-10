@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchPageSkeleton = ({ resultsCount = 5, results }) => {
+const SearchPageSkeleton = () => {
     return (
         <div className="w-full animate-pulse mt-8 sm:mt-12">
             {/* Optional: search bar skeleton */}
@@ -22,8 +22,8 @@ const SearchPageSkeleton = ({ resultsCount = 5, results }) => {
                     ))}
             </div> */}
 
-            <div className="w-full animate-pulse mt-8 sm:mt-12">
-                {results.length !== 0 && (
+            {/* <div className="w-full animate-pulse mt-8 sm:mt-12">
+                {results.length > 0 && (
                     <div className="grid grid-cols-1 gap-4">
                         {Array(resultsCount)
                             .fill(0)
@@ -32,7 +32,7 @@ const SearchPageSkeleton = ({ resultsCount = 5, results }) => {
                             ))}
                     </div>
                 )}
-            </div>
+            </div> */}
 
         </div>
     );

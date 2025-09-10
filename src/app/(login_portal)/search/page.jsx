@@ -113,16 +113,18 @@
 
 
 "use client";
+import SearchCardSkeleton from '@/Components/Skeleton/SearchCardSkeleton';
 import SearchPageSkeleton from '@/Components/Skeleton/SearchPageSkeleton';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 const Search = () => {
     const [term, setTerm] = useState("");
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [showSkeleton, setShowSkeleton] = useState(true);
     const imgURL = "https://wbsoft.work/storage/uploads/newsImg/";
 
     const handleSearch = async () => {
@@ -149,9 +151,21 @@ const Search = () => {
         setTerm("");
     };
 
+
+    useEffect(() => {
+
+        const timer = setTimeout(() => {
+            setShowSkeleton(false);
+        }, 1500);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+
+
     // Show skeleton during search
     if (loading) {
-        return <SearchPageSkeleton resultsCount={5} results={results} />; // 5 placeholder items
+        return <SearchPageSkeleton resultsCount={5} />; // 5 placeholder items
     }
 
     return (
@@ -173,24 +187,34 @@ const Search = () => {
 
             {/* Search results */}
             <div className='mt-10 grid grid-cols-1 gap-4'>
-                {results.map((data, index) => (
-                    <div key={index} className="card w-full shadow-sm">
-                        <Link href={`news-details/${data?.slug_bn}`}>
-                            <figure>
-                                <Image
-                                    className='w-full h-full object-cover'
-                                    src={`${imgURL}${data?.photo}`}
-                                    width={500}
-                                    height={500}
-                                    alt='Image'
-                                />
-                            </figure>
-                            <div className="px-2 py-4">
-                                <p className='line-clamp-2'>{data?.title_bn}</p>
-                            </div>
-                        </Link>
-                    </div>
-                ))}
+                {results.map((data, index) => {
+                    if (showSkeleton) {
+                        return <SearchCardSkeleton resultsCount={5} />;
+                    }
+                    return (
+                        <div key={index} className="card w-full shadow-sm">
+                            <Link href={`news-details/${data?.slug_bn}`} prefetch={true}>
+                                <figure>
+                                    <Image
+                                        className='w-full h-full object-cover'
+                                        src={`${imgURL}${data?.photo}`}
+                                        width={500}
+                                        height={500}
+                                        alt='Image'
+                                    />
+                                </figure>
+                                <div className="px-2 py-4">
+                                    <p className='line-clamp-2'>{data?.title_bn}</p>
+                                </div>
+                            </Link>
+                        </div>
+
+                    )
+                }
+
+                )
+
+                }
             </div>
         </div>
     );
