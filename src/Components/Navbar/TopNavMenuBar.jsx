@@ -10,6 +10,10 @@ import { usePathname } from "next/navigation";
 import { IoClose } from "react-icons/io5";
 
 
+
+import Switch from '@mui/material/Switch';
+
+const label = { inputProps: { 'aria-label': 'Switch demo' } };
 const TopNavMenuBar = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [language, setLanguage] = useState(false);
@@ -60,7 +64,7 @@ const TopNavMenuBar = () => {
                                 <p className="font-bold text-lg">Choose Your language</p>
                                 <div className="border px-2  rounded-sm">
                                     <select name="cars" id="cars" className="outline-0 p-1 ">
-                                        <option selected value="bangla">Bangla</option>
+                                        <option value="bangla">Bangla</option>
                                         <option value="english">English</option>
                                         <option value="hindi">Hindi</option>
                                         <option value="urdu">Urdu</option>
@@ -70,16 +74,16 @@ const TopNavMenuBar = () => {
                             </div>
                             <div className="flex justify-between px-2 mb-4">
                                 <p className="font-bold text-lg">Dark Mode</p>
-                                <div className="border px-2  rounded-sm">
-                                    <input type="checkbox" defaultChecked className="toggle toggle-primary w-10 rounded-full" />
+                                <div className="  ">
+                                    <Switch className="border rounded-sm" {...label} defaultChecked />
 
                                 </div>
                             </div>
                         </div>
 
                         <div className="join join-vertical bg-base-100 w-full">
-                            <div className="collapse collapse-arrow join-item border-base-300 border">
-                                <input type="radio" name="my-accordion-4" defaultChecked />
+                            <div className="collapse collapse-arrow join-item border-base-300 border ">
+                                <input type="radio" name="my-accordion-4" />
                                 <div className="collapse-title font-bold">Top Category</div>
                                 <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
                                     <div className="flex flex-col space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
@@ -110,15 +114,11 @@ const TopNavMenuBar = () => {
                                     </div>
                                 </nav>
                             </div>
-                            <div className="collapse collapse-arrow join-item border-base-300 border">
-                                <input type="radio" name="my-accordion-4" />
-                                <div className="collapse-title font-bold">Business</div>
-                                {/* <div className="collapse-content text-sm"></div> */}
-                            </div>
-                            
-                           
-                           
-                           
+
+
+
+
+
                         </div>
 
                         {/* <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
