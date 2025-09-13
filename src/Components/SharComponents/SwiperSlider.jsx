@@ -24,11 +24,11 @@ const SwiperSlider = ({ photoGallaryData, imgURL }) => {
                 slidesPerView={2}
                 spaceBetween={20}
                 coverflowEffect={{
-                    rotate: 50,
+                    rotate: 0,
                     stretch: 0,
                     depth: 150,
                     modifier: 3,
-                    slideShadows: true,
+                    slideShadows: false,
                 }}
 
                 modules={[EffectCoverflow]}
@@ -40,7 +40,7 @@ const SwiperSlider = ({ photoGallaryData, imgURL }) => {
                         photoGallaryData?.map((gallaryData, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <Link href={`news-details/${gallaryData?.slug_bn}`}  prefetch={true}>
+                                    <Link href={`news-details/${gallaryData?.slug_bn}`} prefetch={true}>
                                         <div className="card w-full shadow-sm bg-white">
                                             <figure>
                                                 <Image
