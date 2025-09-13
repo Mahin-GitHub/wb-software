@@ -192,7 +192,7 @@ const TopNavMenuBar = () => {
 
 
             {/* Scrollable Category Menu */}
-            {/* <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
+            <nav className="overflow-x-auto scrollbar-hide no-scrollbar">
                 <div className="flex space-x-4 px-2 py-2 font-bold text-gray-600 whitespace-nowrap">
                     {categoriesBan.map((slug, index) => {
                         const categorySlug = categoriesEng[index];
@@ -205,8 +205,8 @@ const TopNavMenuBar = () => {
                                 onClick={() => setActiveIndex(index)}
                                 href={`/category/${categorySlug}`}
                                 className={` p-2 transition ${isActive
-                                    ? "text-black border-b-2 border-b-black"
-                                    : "text-gray-500 border-transparent"
+                                    ? "text-black text-sm border-b-2 border-b-black"
+                                    : "text-gray-500 text-sm border-transparent"
                                     }`}
                             >
                                 {slug.charAt(0).toUpperCase() + slug.slice(1)}
@@ -216,7 +216,7 @@ const TopNavMenuBar = () => {
 
                     })}
                 </div>
-            </nav> */}
+            </nav>
         </div>
     );
 };
